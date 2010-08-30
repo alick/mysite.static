@@ -1,0 +1,111 @@
+BODY {
+	BORDER-RIGHT: midnightblue 20pt solid; PADDING-RIGHT: 0.7in; BORDER-TOP: midnightblue 20pt solid; PADDING-LEFT: 0.7in; FONT-SIZE: medium; BACKGROUND: white; PADDING-BOTTOM: 0.7in; BORDER-LEFT: midnightblue 20pt solid; PADDING-TOP: 0.7in; BORDER-BOTTOM: midnightblue 20pt solid; FONT-FAMILY: Times New Roman, Times, serif
+}
+BODY.framed {
+	PADDING-RIGHT: 10pt; PADDING-LEFT: 10pt; PADDING-BOTTOM: 10pt; BORDER-TOP-STYLE: none; PADDING-TOP: 10pt; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+BODY.ascii {
+	BACKGROUND-COLOR: black
+}
+P {
+	TEXT-INDENT: 2em
+}
+P.banner {
+	TEXT-ALIGN: center
+}
+P.mmix {
+	FONT-SIZE: medium; TEXT-INDENT: 0px
+}
+P.tip {
+	COLOR: blue
+}
+OL {
+	FONT-SIZE: medium; PADDING-BOTTOM: 8px; TEXT-INDENT: 0px; LIST-STYLE-TYPE: decimal
+}
+OL.arabic {
+	LIST-STYLE-TYPE: decimal
+}
+OL.cjk {
+	
+}
+OL.roman {
+	LIST-STYLE-TYPE: lower-roman
+}
+A {
+	FONT-WEIGHT: bold; COLOR: #813a66; TEXT-DECORATION: none
+}
+A:hover {
+	BACKGROUND-COLOR: #ff80ff; TEXT-DECORATION: none; caption-side: left
+}
+HR {
+	COLOR: #2e8b57; HEIGHT: 1pt
+}
+UL {
+	LIST-STYLE-TYPE: circle
+}
+DIV {
+	BORDER-RIGHT: white 1pt solid; PADDING-RIGHT: 10pt; BORDER-TOP: white 1pt solid; PADDING-LEFT: 10pt; PADDING-BOTTOM: 10pt; BORDER-LEFT: white 1pt solid; PADDING-TOP: 10pt; BORDER-BOTTOM: white 1pt solid
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+IMG.formula {
+	BORDER-RIGHT: blue thin solid; BORDER-TOP: blue thin solid; BORDER-LEFT: blue thin solid; BORDER-BOTTOM: blue thin solid
+}
+PRE {
+	BORDER-RIGHT: #777777 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #777777 1px solid; PADDING-LEFT: 0.5em; FONT-SIZE: 90%; PADDING-BOTTOM: 0.5em; MARGIN-LEFT: 1em; OVERFLOW: auto; BORDER-LEFT: #777777 1px solid; COLOR: #006400; MARGIN-RIGHT: 2em; PADDING-TOP: 0.5em; BORDER-BOTTOM: #777777 1px solid; FONT-FAMILY: Luxi Mono, Luxi Sans, Monospace, sans-serif, ËÎÌו; WHITE-SPACE: pre; BACKGROUND-COLOR: snow; max-height: 3in
+}
+PRE.syntax {
+	BACKGROUND: lightblue
+}
+PRE.error {
+	BACKGROUND-COLOR: pink
+}
+PRE.url {
+	BACKGROUND: bisque
+}
+PRE.verse {
+	BACKGROUND: pink
+}
+EM {
+	COLOR: #ff9900; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+EM.phrase {
+	COLOR: blue; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+H1 {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.3em; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 2pt; COLOR: #1e2a37; PADDING-TOP: 0.2em; BORDER-BOTTOM: black 2pt solid; ont-size: 28px
+}
+H1.home {
+	FONT-SIZE: 34px; COLOR: #102c4a
+}
+H2 {
+	PADDING-RIGHT: 0.1em; BORDER-TOP: black 1px solid; PADDING-LEFT: 0.3em; FONT-SIZE: 18px; PADDING-BOTTOM: 0.3em; COLOR: #666; PADDING-TOP: 0.2em; BORDER-BOTTOM: black 1px solid
+}
+H3 {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.3em; FONT-SIZE: 16px; PADDING-BOTTOM: 0.3em; BORDER-LEFT: black 1px solid; WIDTH: 70%; COLOR: #666; PADDING-TOP: 0.2em; BORDER-BOTTOM: black 1px solid
+}
+H4 {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 5px; PADDING-LEFT: 2px; FONT-SIZE: 14px; PADDING-BOTTOM: 2px; COLOR: #666; PADDING-TOP: 2px
+}
+H5 {
+	FONT-SIZE: 12px; COLOR: #666; TEXT-ALIGN: left
+}
+LI {
+	MARGIN-TOP: 3ex
+}
+LI.explained {
+	
+}
+P.adage {
+	BORDER-LEFT-COLOR: green; BACKGROUND: lightyellow; BORDER-BOTTOM-COLOR: green; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: green; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: green; BORDER-BOTTOM-STYLE: solid
+}
+P.script {
+	FONT-SIZE: small; TEXT-ALIGN: right
+}
+DIV.tl {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 28px; RIGHT: 0px; LEFT: 0.4cm; PADDING-BOTTOM: 5px; MARGIN: 0px 0px 8px; WIDTH: 7%; COLOR: #666; BOTTOM: auto; PADDING-TOP: 5px; BORDER-BOTTOM: #000 5px solid; POSITION: fixed; TOP: 0.4cm
+}
+.example {
+	BORDER-RIGHT: black 1pt solid; PADDING-RIGHT: 10pt; BORDER-TOP: black 1pt solid; PADDING-LEFT: 10pt; BACKGROUND: rgb(240,240,255); PADDING-BOTTOM: 10pt; OVERFLOW: auto; BORDER-LEFT: black 1pt solid; PADDING-TOP: 10pt; BORDER-BOTTOM: black 1pt solid
+}

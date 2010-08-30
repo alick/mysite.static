@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>这是上网的门户</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="favicon.ico" rel="SHORTCUT ICON" />
+		<link href="../css/style1.css" rel="stylesheet" type="text/css" />
+		<link href="../css/surfing.css" rel="stylesheet" type="text/css" />
+		<link href="../css/drag.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../js/eventsManager.js"></script>
+		<script type="text/javascript" src="../js/multiSearch.js"></script>
+		<script type="text/javascript" src="../js/lunar1.js"></script>
+		<script type="text/javascript" src="../js/drag.js"></script>
+	</head>
+	<body>
+		<div id="header"><!-- div means to divide pages into several parts -->
+			<div id="sitebranding">
+				<h1>常用站点</h1>
+			</div>
+			<div id="timer"><!-- show current time -->
+			</div>
+			<div id="weather">
+				<object type="text/html" data="http://www.265.com/weather.htm" name="I2"></object>
+			</div>
+			<div id="tagline">
+				<p><strong>致力遵守：<abbr title="Keep It Simple and Stupid">KISS原则</abbr>与Web标准</strong></p>
+        	</div>
+		<div id="search">
+		<!-- SiteSearch Google copyed from Google but modified-->
+		<form method="get" id="form1" action="http://www.google.com.hk/search">
+			<fieldset>
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="hidden" name="oe" value="UTF-8" />
+			<abbr title="用google.com.hk搜索"><input type="text" name="q" size="20" maxlength="255" value="" /></abbr>
+			<!--<input type="radio" name="sitesearch" value="http://learn.tsinghua.edu.cn:8080/" /><span class="fun">tsinghuaren</span>-->
+			<select id="select">
+			<option selected="selected" value="0">google.com.hk</option>
+			<option value="1">google.com.hk/linux</option>
+			</select>
+			<input type="submit" name="btnG" value="Go" onclick="multi_search()" />
+			</fieldset>
+		</form>
+		</div> <!-- end of search div -->
+		
+		</div> <!-- end of header -->
+		<div id="maincontent">
+		<div id="wecando" class="shadow">
+		<h2><a href="../index.html">首页</a>
+			<a href="#surfing"  class="focus">站点导航</a>
+			<a href="resources.html">文档资料</a>
+			<a href="images.html">美图收藏</a>
+			<a href="music.html">OGG音乐</a>
+			<a href="about.html">关于</a>
+		</h2>
+		</div><!-- end of wecando -->
+		<div id="surfing" class="surfing">
+			<h3>站点导航：</h3>
+			<div class="siteclass dragAble">学习：
+			<a href="http://info.tsinghua.edu.cn/index.jsp">信息门户</a>
+			<a href="thuportal.html">小信息门户</a>
+			</div>
+			<div class="siteclass dragAble">搜索：
+			<a href="http://www.google.com">Google.com</a>
+			<a href="http://www.google.com/linux">Linux搜索</a>
+			</div>
+			<div class="siteclass dragAble">论坛：
+			<a href="http://www.google.com/reader/view/?hl=en&amp;tab=wy">Google Reader</a>
+			<a href="http://www.linuxdiyf.com/bbs">红联BBS</a>
+			<a href="http://passport.renren.com/PLogin.do">上校内</a>
+			</div>
+			<div class="siteclass dragAble">工具：
+			<a href="http://www.poptool.net/enet/mp3_lrc/">LRC歌词</a>
+			<a href="calcu_constellation_zodiac.html">星座属相计算器</a>
+			<a href="http://cgbt.cn/forums/viewthread.php?tid=237846">IPV6电视电台</a>
+			<a href="huochepiao.html">火车票查询</a>
+			<a href="http://www.ip138.com/ips8.asp">IP查询</a>
+			</div>
+		</div>
+		</div><!-- end of maincontent -->
+		<div id="bottom">
+			<div class="tiny">
+			<p>
+			<a href="http://bluefish.openoffice.nl/">Made with formerly Bluefish HTML editor and now VIM.</a></p>
+			<p>
+			<a href="http://validator.w3.org/">Valid XHTML 1.0 Strict</a>
+			<span class="fun">推荐使用良好支持标准的浏览器</span><a href="http://www.mozillaonline.com/">获得Firefox</a>
+			</p>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- vim:set et sw=4: -->

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+dirs=("html" "css" "img" "js" "txt")
+for dir in ${dirs[@]}; do
+echo "Entering directory $dir"
+cd $dir
+if [ $? -eq 0 ]; then
+	rm -i *~
+	rm -i *.zip
+	echo "creating zip file"
+	zip $dir *
+	mv "$dir.zip" ../
+	cd ..
+fi
+echo "Leaving directory " $dir
+done

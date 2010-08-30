@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+
+    <title>Alick's Personal Homepage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style1.css" rel="stylesheet" type="text/css" />
+    <link href="css/drag.css" rel="stylesheet" type="text/css" />
+    <link href="img/favicon.ico" rel="SHORTCUT ICON" />
+    <script type="text/javascript" src="js/eventsManager.js">
+</script>
+    <script type="text/javascript" src="js/multiSearch.js">
+</script>
+    <script type="text/javascript" src="js/lunar1.js">
+</script>
+    <script type="text/javascript" src="js/drag.js">
+</script>
+</head>
+
+<body>
+    <div id="header">
+        <!-- div means to divide pages into several parts -->
+
+        <div id="sitebranding">
+            <h1>欢迎光临</h1>
+        </div>
+
+        <div id="timer">
+            <!-- show current time -->
+            <!--<object type="text/html" data="http://www.265.com/time.html"></object>-->
+        </div>
+
+        <div id="weather">
+            <object type="text/html" data="http://www.265.com/weather.htm"
+            name="I2">
+                </object>
+        </div>
+
+        <div id="tagline">
+            <p><strong>致力遵守：<abbr title=
+            "Keep It Simple and Stupid">KISS原则</abbr>与Web标准</strong></p>
+        </div>
+
+        <div id="search">
+            <!-- SiteSearch Google copyed from Google but modified-->
+
+            <form method="get" id="form1" action=
+            "http://www.google.com.hk/search">
+                <fieldset>
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input type="hidden" name="oe" value="UTF-8" />
+                    <abbr title="用google.cn搜索">
+                        <input type="text" name="q"
+                        size="20" maxlength="255" value="" />
+                    </abbr> 
+                    <!--<input type="radio" name="sitesearch" value="http://learn.tsinghua.edu.cn:8080/" /><span class="fun">tsinghuaren</span>-->
+                     <select id="select">
+                        <option selected="selected" value="0">
+                            google.com.hk
+                        </option>
+
+                        <option value="1">
+                            google.com.hk/linux
+                        </option>
+                    </select> <input type="submit" name="btnG" value="Go"
+                    onclick="multi_search()" />
+                </fieldset>
+            </form>
+        </div><!-- end of search div -->
+    </div><!-- end of header -->
+
+    <div id="maincontent">
+        <div id="wecando" class="shadow">
+            <h2><a href="index.html" class="focus">首页</a>
+                <a href="html/surfing.html">站点导航</a>
+                <a href="html/resources.html">文档资料</a>
+                <a href="html/images.html">美图收藏</a>
+                <a href="html/music.html">OGG音乐</a>
+                <a href="html/about.html">关于</a>
+            </h2>
+        </div><!-- end of wecando -->
+        <div class="dragAble" style="width: 30%;"> 测试一下可拖动 </div>
+        <div class="box_rgba dragAble" style="width: 30%;"> 测试一下透明和可拖动</div>
+
+        <p>欢迎来到我的个人主页。希望你能在这里发现有用或者有趣的东西。至于这里究竟有什么东西，你就慢慢的发掘吧。:-)</p>
+    </div><!-- end of maincontent -->
+
+    <div id="bottom">
+        <div class="shadow">
+            <a href="html/libra.html">关于我</a> 与我联系：<a href=
+            "mailto:alick9188@163.com">邮箱</a> 或者 <abbr title=
+            "Add me: alick9188@gmail.com">Google talk</abbr>
+        </div>
+
+        <div class="tiny">
+            <p><a href="http://bluefish.openoffice.nl/">Made with formerly
+            Bluefish HTML editor and now VIM.</a></p>
+
+            <p><a href="http://validator.w3.org/">Valid XHTML 1.0 Strict</a>
+            <span class="fun">推荐使用良好支持标准的浏览器</span><a href=
+            "http://www.mozillaonline.com/">获得Firefox</a></p>
+
+            <p><a rel="license" href=
+            "http://creativecommons.org/licenses/by-sa/2.5/cn/"><img alt=
+            "Creative Commons License" style="border-width:0" src=
+            "http://i.creativecommons.org/l/by-sa/2.5/cn/88x31.png" /></a><br />
+
+            本作品采用<a rel="license" href=
+            "http://creativecommons.org/licenses/by-sa/2.5/cn/">知识共享署名-相同方式共享
+            2.5 中国大陆许可协议</a>进行许可。</p>
+        </div>
+    </div>
+</body>
+</html>
+<!-- vim:set et sw=4: -->

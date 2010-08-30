@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>计算星座与属相</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="style1.css" rel="stylesheet" type="text/css" />
+	</head>
+<body>
+
+<div>
+      <p align="center">
+      <script type="text/javascript">
+<!-- Begin
+function signs() {
+var start = 1901, birthyear = document.zodiac.year.value, date=document.zodiac.date.value, month=document.zodiac.month.selectedIndex;
+
+with (document.zodiac.sign){
+
+if (month == 1 && date >=20 || month == 2 && date <=18) {value = "水瓶座";}
+if (month == 1 && date > 31) {value = "Huh?";}
+if (month == 2 && date >=19 || month == 3 && date <=20) {value = "双鱼座";}
+if (month == 2 && date > 29) {value = "Say what?";}
+if (month == 3 && date >=21 || month == 4 && date <=19) {value = "白羊座";}
+if (month == 3 && date > 31) {value = "OK.  Whatever.";}
+if (month == 4 && date >=20 || month == 5 && date <=20) {value = "金牛座";}
+if (month == 4 && date > 30) {value = "I'm soooo sorry!";}
+if (month == 5 && date >=21 || month == 6 && date <=21) {value = "双子座";}
+if (month == 5 && date > 31) {value = "Umm ... no.";}
+if (month == 6 && date >=22 || month == 7 && date <=22) {value = "巨蟹座";}
+if (month == 6 && date > 30) {value = "Sorry.";}
+if (month == 7 && date >=23 || month == 8 && date <=22) {value = "狮子座";}
+if (month == 7 && date > 31) {value = "Excuse me?";}
+if (month == 8 && date >=23 || month == 9 && date <=22) {value = "室女座";}
+if (month == 8 && date > 31) {value = "Yeah. Right.";}
+if (month == 9 && date >=23 || month == 10 && date <=22) {value = "天秤座";}
+if (month == 9 && date > 30) {value = "Try Again.";}
+if (month == 10 && date >=23 || month == 11 && date <=21) {value = "天蝎座";}
+if (month == 10 && date > 31) {value = "Forget it!";}
+if (month == 11 && date >=22 || month == 12 && date <=21) {value = "人马座";}
+if (month == 11 && date > 30) {value = "Invalid Date";}
+if (month == 12 && date >=22 || month == 1 && date <=19) {value = "摩羯座";}
+if (month == 12 && date > 31) {value = "No way!";}
+}
+x = (start - birthyear) % 12
+with (document.zodiac.csign){
+if (x == 1 || x == -11) {value = "老鼠";}
+if (x == 0) {value = "牛";}
+if (x == 11 || x == -1) {value = "老虎";}
+if (x == 10 || x == -2) {value = "兔子";}
+if (x == 9 || x == -3)  {value = "龙";}
+if (x == 8 || x == -4)  {value ="蛇";}
+if (x == 7 || x == -5)  {value = "马";}
+if (x == 6 || x == -6)  {value = "羊";}
+if (x == 5 || x == -7)  {value = "猴子";}
+if (x == 4 || x == -8)  {value = "鸡";}
+if (x == 3 || x == -9)  {value = "狗";}
+if (x == 2 || x == -10)  {value = "猪";}  
+
+}
+}
+//  End -->
+</script>
+<form name="zodiac" class="zodiac">
+<fieldset>
+<legend>计算星座与属相</legend>
+   <div>
+	<label>出生年份</label>
+<input type="text" size="10" name="year" value="出生年份" onClick=value=""></div>
+	<div>
+		    <label>出生月份</label>
+
+<select name="month">
+                          <option value="x" selected>选择月份</option>
+                          <option value="1">一月</option>
+                          <option value="2">二月</option>
+                          <option value="3">三月</option>
+                          <option value="4">四月</option>
+                          <option value="5">五月</option>
+                          <option value="6">六月</option>
+                          <option value="7">七月</option>
+                          <option value="8">八月</option>
+                          <option value="9">九月</option>
+                          <option value="10">十月</option>
+                          <option value="11">十一月</option>
+                          <option value="12">十二月</option>
+                        </select></div>
+                    <div><label>出生日期</label>
+                      <input type="text" name="date" value="输入日期" size="10" onClick=value="">
+	
+                      <div>
+                      <input type="button" value="计算" onClick="signs()">
+                      </div>
+                      </div>
+                    <div><label>星座:</label>
+                        <input type="text" name="sign" size="10" value="">
+                      </div>
+                     <div><label>属相:</label>
+                        <input type="text" name="csign" size="10">
+                      </div>
+</fieldset>
+</form>
+      <p>来自红联&nbsp;<a href="http://www.linuxdiyf.com/bbs/">前往红联论坛</a></p>
+</div>
+</body>
+
+</html>
+<!-- vim:set et sw=4: -->

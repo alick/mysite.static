@@ -1,0 +1,746 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<meta name="generator" content="Bluefish 1.0.7">
+	<meta name="author" content="alick zhao">
+	<META NAME="CREATED" CONTENT="20090916;19284700">
+	<META NAME="CHANGEDBY" CONTENT="alick zhao">
+	<META NAME="CHANGED" CONTENT="20090916;19292600">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		TD P { margin-bottom: 0cm }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="zh-CN" DIR="LTR">
+<P>文章作者：<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US"><FONT COLOR="#0000ff">Slyar
+</FONT></SPAN></FONT>文章来源：<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Slyar
+Home (<A HREF="http://www.slyar.com/" TARGET="_blank">www.slyar.com</A>)
+</SPAN></FONT>转载请注明，谢谢合作。</P>
+<P>恩，问这个问题的人太多了，懒得继续回答，直接贴上来自己看。。。</P>
+<TABLE WIDTH=562 BORDER=1 CELLPADDING=2 CELLSPACING=0>
+	<COL WIDTH=64>
+	<COL WIDTH=60>
+	<COL WIDTH=122>
+	<COL WIDTH=140>
+	<COL WIDTH=68>
+	<COL WIDTH=82>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER>优先级</P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER>运算符</P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>名称或含义</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>使用形式</P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>结合方向</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>说明</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=4 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">1</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">[]</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>数组下标</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>数组名<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">[</SPAN></FONT>常量表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">]</SPAN></FONT></P>
+		</TD>
+		<TD ROWSPAN=4 WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">()</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>圆括号</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>（表达式）<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>函数名<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">(</SPAN></FONT>形参表<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">.</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>成员选择（对象）</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>对象<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">.</SPAN></FONT>成员名</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-&gt;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>成员选择（指针）</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>对象指针<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-&gt;</SPAN></FONT>成员名</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=9 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">2</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>负号运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=9 WIDTH=68>
+			<P ALIGN=CENTER>右到左</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">(</SPAN></FONT>类型<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>强制类型转换</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">(</SPAN></FONT>数据类型<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">++</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>自增运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">++</SPAN></FONT>变量名<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>变量名<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">++</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">--</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>自减运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">--</SPAN></FONT>变量名<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>变量名<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">--</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">*</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>取值运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">*</SPAN></FONT>指针变量</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>取地址运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;</SPAN></FONT>变量名</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">!</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>逻辑非运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">!</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">~</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位取反运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">~</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>单目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">sizeof</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>长度运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">sizeof(</SPAN></FONT>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">)</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=3 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">3</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>除</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=3 WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">*</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>乘</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">*</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">%</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>余数（取模）</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>整型表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>整型表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">4</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">+</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>加</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">+</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>减</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">5</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;&lt;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>左移</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;&lt;</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;&gt;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>右移</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;&gt;</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=4 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">6</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>大于</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=4 WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>大于等于</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>小于</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>小于等于</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">7</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">==</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>等于</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">==</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">!=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>不等于</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">!=
+			</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">8</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位与</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">9</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">^</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位异或</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">^</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">10</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">|</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位或</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">|</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">11</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;&amp;</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>逻辑与</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;&amp;</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">12</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">||</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>逻辑或</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">||</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>双目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">13</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">?:</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>条件运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">1?
+			</SPAN></FONT>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">2:
+			</SPAN></FONT>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">3</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>右到左</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>三目运算符</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=11 WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">14</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>赋值运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD ROWSPAN=11 WIDTH=68>
+			<P ALIGN=CENTER>右到左</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>除后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">*=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>乘后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">*=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">%=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>取模后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">%=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">+=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>加后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">+=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>减后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">-=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;&lt;=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>左移后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&lt;&lt;=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;&gt;=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>右移后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;&gt;=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位与后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&amp;=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">^=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位异或后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">^=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">|=</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>按位或后赋值</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>变量<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">|=</SPAN></FONT>表达式</P>
+		</TD>
+		<TD WIDTH=82></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=64>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">15</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=60>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">,</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=122>
+			<P ALIGN=CENTER>逗号运算符</P>
+		</TD>
+		<TD WIDTH=140>
+			<P ALIGN=CENTER>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">,</SPAN></FONT>表达式<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">,…</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=68>
+			<P ALIGN=CENTER>左到右</P>
+		</TD>
+		<TD WIDTH=82>
+			<P ALIGN=CENTER>从左向右顺序运算</P>
+		</TD>
+	</TR>
+</TABLE>
+<P>说明：</P>
+<P>同一优先级的运算符，运算次序由结合方向所决定。</P>
+<P>简单记就是：<FONT COLOR="#ff0000">！ <FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;
+</FONT></SPAN></FONT><FONT COLOR="#ff0000">算术运算符 <FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;
+</FONT></SPAN></FONT><FONT COLOR="#ff0000">关系运算符 <FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">&gt;
+&amp;&amp; &gt; || &gt; </FONT></SPAN></FONT><FONT COLOR="#ff0000">赋值运算符</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+		<div id="go_home" align="center">
+			<a href="../index.html">回到首页</a>
+		</div><!-- end of go_home div -->
+</BODY>
+</HTML>
+<!-- vim:set et sw=4: -->

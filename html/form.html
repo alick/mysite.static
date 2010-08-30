@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 这样对网页进行注释 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Fill a form</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="style1.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div>
+			<form method="post" action="http://passport.renren.com/PLogin.do" focus="email" class="login">
+			<fieldset>
+				<legend>Log in</legend>
+				<div>
+					<label for="email">Enter your name:</label>
+					<input type="text" name="email" id="email" value="email" />
+				</div>
+				<div>
+					<label for="password">Enter your password:</label>
+					<input type="password" name="password" id="password" />
+				</div>
+					<select name="网站">
+						<option value="website">xiaonei</option>
+						<option value="website">baidu</select>
+					</select>
+				<div>
+					<input type="hidden" name="origURL" value="http://home.renren.com/Home.do" />											<input type="hidden" name="domain" value="renren.com" />
+					<input type="hidden" name="formName" value="" />
+					<input type="hidden" name="method" value="" />
+					<div class="buttonarea">
+						<input type="submit" value="Log in"/>
+					</div>
+				</div>
+			</fieldset>
+			</div>
+			</form>
+		</div>
+	</body>
+</html>
+	<!-- vim:set et sw=4: -->

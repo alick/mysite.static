@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+
+    <title>A Simple Portal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/style1.css" rel="stylesheet" type="text/css" />
+    <link href="../css/thuportal.css" rel="stylesheet" type="text/css" />
+    <!-- <script type="text/javascript" src=""></script> -->
+</head>
+
+<body>
+    <div id="maincontent">
+        <div id="wecando" class="shadow">
+            <h2><a href="../index.html" class="focus">首页</a></h2>
+        </div><!-- end of wecando div-->
+
+        <div>
+            <form method="post" action=
+            "https://portal.cic.tsinghua.edu.cn:443/Login" class="login">
+                <fieldset>
+                    <legend>Log in Your Account</legend>
+
+                    <div>
+                        <label for="userName">Enter your name:</label>
+                        <input name="userName" id="userName" type="text"
+                        size="15" class="text" />
+                    </div>
+
+                    <div>
+                        <label for="password">Enter your password:</label>
+                        <input name="password" type="password" size="14"
+                        class="text" />
+                    </div><!--
+                                        <select name="网站">
+                                                <option value="website">xiaonei</option>
+                                                <option value="website">baidu</select>
+                                        </select>
+                                        -->
+
+                    <div>
+                        <input type="submit" value="Log in" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    <div>
+        <p>通知</p>
+        <object class="thunotice" type="text/html" data=
+        "http://info.tsinghua.edu.cn/view/notice_beforelogin.htm">
+            </object>
+    </div>
+</div><!-- end of maincontent div -->
+</body>
+</html>
