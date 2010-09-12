@@ -15,105 +15,105 @@ apply to the top, right, bottom, and left, respectively.
 */
 
 body {
-	margin: 0px;
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	background-color: #e2edff;	/*这个16进制数表示淡蓝色*/
-	line-height: 125%;
-	padding: 0;
+    margin: 0px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    background-color: #e2edff;	/*这个16进制数表示淡蓝色*/
+    line-height: 125%;
+    padding: 0;
 }
 
 li {
-	font-size: medium;
+    font-size: medium;
 }
 
 a {
-	text-decoration: none;
-	color: #0099cc;
+    text-decoration: none;
+    color: #0099cc;
 }
-	
+
 a:hover {
-	text-decoration: underline;
-	color: white;
-	background-color: #a2ccff;
+    text-decoration: underline;
+    color: white;
+    background-color: #a2ccff;
 }
 
 em {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 h1, h2, h3 {
-	color: navy;
+    color: navy;
 }
 
 h1 {
-	font-size: x-large;
-	margin: 20px;
+    font-size: x-large;
+    margin: 20px;
 }
 
 h2 {
-	margin: 0;
-	font-size: large;
-	font-weight: normal;
-	text-decoration: none;	/*另有none, overline, line-through */
+    margin: 0;
+    font-size: large;
+    font-weight: normal;
+    text-decoration: none;	/*另有none, overline, line-through */
 }
 
 p {
-	text-indent: 2em;
-	font-size: medium;
-	color: navy;	/*navy是海蓝色*/
+    text-indent: 2em;
+    font-size: medium;
+    color: navy;	/*navy是海蓝色*/
 }
 
 #header p {
-	font-family: Georgia, Times, serif;
-	font-style: italic;
+    font-family: Georgia, Times, serif;
+    font-style: italic;
 }
 
 #header {
-	margin: 0px 45px 0px;
-	padding: 3px;
-	background: url(../img/pic_header.jpeg) repeat-x center;
-	-moz-border-radius: 0.5em 0.5em 0 0;
+    margin: 0px 45px 0px;
+    padding: 3px;
+    background: url(../img/pic_header.jpeg) repeat-x center;
+    -moz-border-radius: 0.5em 0.5em 0 0;
 }
 
 #wecando {
-	background-color: #e2edff;
-	padding: 0;
+    background-color: #e2edff;
+    padding: 0;
 }
 
 #surfing {
-	position: relative;
-	left: 40%;
-	width: 55%;
+    position: relative;
+    left: 40%;
+    width: 55%;
 }
 
 #wecando a, #surfing a, #resources a, #songs a, #music a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #version, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music {
-	padding: 12px;
+    padding: 12px;
 }
 
 #image {
-	/*border: 1px solid red;
-	 */
-	text-align: center;
-	margin: 0px auto;
+    /*border: 1px solid red;
+     */
+text-align: center;
+margin: 0px auto;
 }
 #image_box_container {
-	display: block;
-	width: 800px;
-	height: 520px;
-	margin: 0 auto;
-	text-align: center;
+    display: block;
+    width: 800px;
+    height: 520px;
+    margin: 0 auto;
+    text-align: center;
 }
 #image_box  {
-	margin: 0;
-	width: 800px;
-	height: 520px;
-	position: relative;
-	display: table-cell;
-	vertical-align: middle;
+    margin: 0;
+    width: 800px;
+    height: 520px;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /*
@@ -125,242 +125,241 @@ p {
 */
 
 #timer {
-	/*border: 1px solid red;*/	
-	position: absolute;
-	top: 15px;
-	left: 50%;
-	width: 25%;
-	height: 3em;
-	margin: 0;
-	padding: 0px;
-	font-size: 0.9em;
-	color: green;
+    /*border: 1px solid red;*/	
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 25%;
+    height: 3em;
+    margin: 0;
+    padding: 0px;
+    font-size: 0.9em;
+    color: green;
 }
 #tagline {
-	width: 50%;
+    width: 50%;
 }
 
 #weather {
-	/*border: 1px solid red;*/
-	position: absolute;
-	top: 15px;
-	left: 70%;
-	height: 50px;
-	width: 20%;
+    /*border: 1px solid red;*/
+    position: absolute;
+    top: 15px;
+    left: 70%;
+    height: 50px;
+    width: 20%;
 }
 
 #search {	
-	/*border: 1px solid red;*/
-	position: absolute;
-	top: 55px;
-	left: 50%;
-	/* width: 40%; */
+    /*border: 1px solid red;*/
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    /* width: 40%; */
 }
 
 #maincontent {
-	/*border: 1px solid red; */
-	margin: 0 45px 0;
-        padding: 0 0px 20px;
-	/*background-color: #a2ccff;
-	 */
-	background-color: #f0ffff;
+    /*border: 1px solid red; */
+    margin: 0 45px 0;
+    padding: 0 0px 20px;
+    /*background-color: #a2ccff;
+     */
+background-color: #f0ffff;
 }
 
 #back2top {
-	text-align: center;
+    text-align: center;
 }
 
 #bottom {
-	/*border: 1px solid red;
-	*/
-	margin: 0px 45px 0px;
-	padding: 10px;
-	text-align: center;
-	background: url(../img/pic_bottom.jpeg) no-repeat bottom center;
-	-moz-border-radius: 0 0 0.5em 0.5em;
+    /*border: 1px solid red;
+     */
+margin: 0px 45px 0px;
+padding: 10px;
+text-align: center;
+background: url(../img/pic_bottom.jpeg) no-repeat bottom center;
+-moz-border-radius: 0 0 0.5em 0.5em;
 }
 #bottom p {
-	margin: 1px;
+    margin: 1px;
 }
 #resources {
-	position: relative;
-	left: 30%;
-	width: 60%;
-	margin: 0px;
-	padding: 10px;
+    position: relative;
+    left: 30%;
+    width: 60%;
+    margin: 0px;
+    padding: 10px;
 }
 
 #huochepiao object {
-	margin: 10px;
-	padding: 0;
-	height: 100px;
-	width: 600px;
+    margin: 10px;
+    padding: 0;
+    height: 100px;
+    width: 600px;
 }
 
 #bgp-libra {
-	background-color: purple;
-	background-image: url(../img/libra.jpg);
+    background-color: purple;
+    background-image: url(../img/libra.jpg);
 }
 
 #bgp-libra p {
-	color: navy;
-	width: 61.8%;
-	margin-left: 12px;
+    color: navy;
+    width: 61.8%;
+    margin-left: 12px;
 }
 
 /* class definition
  */
 .focus {
-	background-color: #f0ffff;
+    background-color: #f0ffff;
 }
 
 .fun {
-	color: #339999;
-	font-family: Georgia, Times, serif;
-	letter-spacing: 0.05em;
+    color: #339999;
+    font-family: Georgia, Times, serif;
+    letter-spacing: 0.05em;
 }
 
 .tiny p {
-	font-size: small;
+    font-size: small;
 }
 .festival {
-	color: red;
+    color: red;
 }
 
 /* inside my site */
 .shadow {
-	text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.5);
+    text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.5);
 }
 .shadow a {
-	color: rgb(36, 109, 56);
-	text-decoration: none;
+    color: rgb(36, 109, 56);
+    text-decoration: none;
 }
 .shadow a:hover {
-	color: rgb(96, 73, 141);
-	text-shadow: 2px 2px 2px rgba(36, 109, 56, 0.5);
+    color: rgb(96, 73, 141);
+    text-shadow: 2px 2px 2px rgba(36, 109, 56, 0.5);
 }
 .here {
-	color: rgb(36, 109, 56);
-	text-decoration: none;
+    color: rgb(36, 109, 56);
+    text-decoration: none;
 }
 
 .box_rgba {
 
-background-color: #B4B490;
+    background-color: #B4B490;
 
-background:transparent;
+    background:transparent;
 
-/*
-* IE6,IE7 
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490');
-* IE8 
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490')";
-zoom: 1;
-*/
+    /*
+     * IE6,IE7 
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490');
+     * IE8 
+     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490')";
+     zoom: 1;
+     */
 
 background-color: rgba(180, 180, 180, 0.6); /* FF3+, Saf3+, Opera 10.10+, Chrome */
 
 }
 .surfing a {
-	color: #ffffff;
-	background: skyblue;
-	background-color: rgba(0, 200, 200, 0.6);
-	-moz-border-radius: 5px;
+    color: #ffffff;
+    background: skyblue;
+    background-color: rgba(0, 200, 200, 0.6);
+    -moz-border-radius: 5px;
 }
 .surfing a:hover {
-	color: yellow;
+    color: yellow;
 }
 .bubble {
-	position:relative;
-	padding:15px;
-	margin:1em 3em 3em;
-	width: 80%;
-	color:#fff;
-	background:#075698;
-	/* 圆角
-	 */
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	/* 线性渐变效果
-	 * 似乎无效
-	background: -webkit-gradient(linear, left top, left bottom, from(#f9d835), to(#f3961c));
-	background:-moz-linear-gradient(top, #f9d835, #f3961c);
-	background:-o-linear-gradient(top, #f9d835, #f3961c);
-	background:linear-gradient(top, #f9d835, #f3961c);
-	 */
+    position:relative;
+    padding:15px;
+    margin:1em 3em 3em;
+    width: 80%;
+    color:#fff;
+    background:#075698;
+    /* 圆角
+     */
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+/* 线性渐变效果
+ * 似乎无效
+ background: -webkit-gradient(linear, left top, left bottom, from(#f9d835), to(#f3961c));
+ background:-moz-linear-gradient(top, #f9d835, #f3961c);
+ background:-o-linear-gradient(top, #f9d835, #f3961c);
+ background:linear-gradient(top, #f9d835, #f3961c);
+ */
 }
 /*
 .bubble:after {
-*/
-	/* \0000a0 means the html entity &nbsp;
-	 * in css
-	 */
+ */
+/* \0000a0 means the html entity &nbsp;
+ * in css
+ */
 /*
-	content: "\0000a0";
-	width: 0px;
-	height: 0px;
-	display: block;
-	border-style: solid;
-	border-width: 15px;
-	border-color: #f3961c transparent transparent transparent;
-*/
-	/*
-	position: relative;
-	*/
+content: "\0000a0";
+width: 0px;
+height: 0px;
+display: block;
+border-style: solid;
+border-width: 15px;
+border-color: #f3961c transparent transparent transparent;
+ */
 /*
-	z-index: -1;
-	bottom: -30px;
-	left: 50px;
+position: relative;
+ */
+/*
+z-index: -1;
+bottom: -30px;
+left: 50px;
 }
-*/
+ */
 
 .version {
-	text-decoration: underline;
+    text-decoration: underline;
 }
+
 pre {
-  color: #000;
-  background-color: #f9f9f9;
-  border: 1px dashed #2f6fab;
-  font-weight: normal;
-  max-height:20em; 
-  overflow:auto;
-  margin: 20px;
+    color: #000;
+    background-color: #f9f9f9;
+    border: 1px dashed #2f6fab;
+    font-weight: normal;
+    max-height:20em; 
+    overflow:auto;
+    margin: 20px;
 }
 
 form fieldset {
-	border: 1px none navy;
-	padding: 10px;
+    border: 1px none navy;
+    padding: 10px;
 }
 
 form legend {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 form.login label {
-	display: block;
-	width: 200px;
-	float: left;
+    display: block;
+    width: 200px;
+    float: left;
 }
 
 form input {
-	/*
-	background: gray;
-	color: white;
-	*/
-	padding: 2px;
-	border-width: 1px;
-	border-style: solid ;
-	border-color: #999999 #cccccc #cccccc #999999;
+    /*background: gray;*/
+    color: blue;
+    padding: 1px;
+    /*border-width: 1px;*/
+    /*border-style: solid ;*/
+    /*border-color: #999999 #cccccc #cccccc #999999;*/
 }
 
 form.login .buttonarea {
-	background-color: #0066ff;
-	text-align: center;
+    background-color: #0066ff;
+    text-align: center;
 }
 
 form.zodiac label {
-	display: block;
-	width: 100px;
-	float: left;
+    display: block;
+    width: 100px;
+    float: left;
 }
