@@ -1,6 +1,7 @@
 
 .dragAble {
     position:relative;
+    /*position: absolute;*/
     cursor:move;
 }
 /* vim:set et sw=4: */

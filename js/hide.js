@@ -1,0 +1,14 @@
+$(document).ready(function(){
+  $(".clickhide").click(function(){
+      $(this).hide();
+  });
+  $(".clickhideslow").click(function(){
+      $(this).hide("slow");
+  });
+  $(".clickfadeout").click(function(){
+      $(this).fadeOut();
+  });
+  $(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
