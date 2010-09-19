@@ -319,6 +319,14 @@ left: 50px;
     text-decoration: underline;
 }
 
+.cmdinline {
+    color: #000;
+    background-color: #f9f9f9;
+    /*border: 1px dashed #2f6fab;*/
+    font-weight: normal;
+    margin: 2px;
+}
+
 pre {
     color: #000;
     background-color: #f9f9f9;
