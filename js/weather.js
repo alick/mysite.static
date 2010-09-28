@@ -6,7 +6,7 @@ function showWeather(){
 
 function showWeatherLoop() {
     showWeather();
-    setInterval('showWeather()',1000*60*10);//10分钟刷新1次当前天气
+    setInterval('showWeather()',1000*60*30);//30分钟刷新1次当前天气
 }
 
 addOnLoadEvent(showWeatherLoop);
