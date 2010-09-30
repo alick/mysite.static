@@ -1,6 +1,6 @@
 
 function showWeather(){
-	var str = '<object type="text/html" data="http://www.265.com/weather.htm" name="I2"> </object>';
+	var str = '<object type="text/html" data="http://www.265.com/weather.htm" name="I2" style="overflow: hidden;"></object>';
 	document.getElementById("weather").innerHTML = str;
 }
 
