@@ -163,9 +163,11 @@ margin: 0px auto;
     /*border: 1px solid red; */
     float: right;
     width: 20%;
-    margin: 2em 5% 0 0;
+    margin: 0em 5% 0 0;
     /*padding: 0 0px 20px;*/
     background-color: #dcdcdc;
+    background-color: rgba(220, 220, 220, 0.3);
+    background:-moz-linear-gradient(top, #f9d835, #f3961c); /* ff 3.6+ */
 }
 
 #maincontent {
@@ -270,7 +272,7 @@ background-color: #e0fffe;
      zoom: 1;
      */
 
-background-color: rgba(180, 180, 180, 0.6); /* FF3+, Saf3+, Opera 10.10+, Chrome */
+    background-color: rgba(180, 180, 180, 0.6); /* FF3+, Saf3+, Opera 10.10+, Chrome */
 
 }
 .surfing a {
