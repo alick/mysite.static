@@ -276,12 +276,13 @@ background-color: #e0fffe;
 
 }
 .surfing a {
-    background: skyblue;
-    background-color: rgba(255, 255, 0, 0.6);
+    background: #00c8c8;
+    /*background-color: rgba(255, 255, 0, 0.6);*/
     -moz-border-radius: 5px;
+    color: white;
 }
 .surfing a:hover {
-    color: red;
+    color: yellow;
 }
 .bubble {
     position:relative;
