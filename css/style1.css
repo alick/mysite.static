@@ -92,7 +92,7 @@ p {
     text-decoration: none;
 }
 
-#version, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music {
+#version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music {
     padding: 12px;
 }
 
@@ -234,6 +234,9 @@ background-color: #e0fffe;
     letter-spacing: 0.05em;
 }
 
+.tiny {
+    font-size: small;
+}
 .tiny p {
     font-size: small;
 }

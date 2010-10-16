@@ -11,4 +11,12 @@ $(document).ready(function(){
   $(".flip").click(function(){
     $(".panel").slideToggle("slow");
   });
+  $(".clicktogglereleasenotes").click(function(){
+      $("#releasenotes").slideToggle();
+      if ($(this).html() == "折叠") {
+      $(this).html("展开");
+      } else {
+      $(this).html("折叠");
+      }
+  });
 });
