@@ -92,7 +92,7 @@ p {
     text-decoration: none;
 }
 
-#version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music {
+#version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music, #aboutme {
     padding: 12px;
 }
 
