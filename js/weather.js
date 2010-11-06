@@ -1,7 +1,7 @@
 
 function showWeather(){
-	var str = '<object type="text/html" data="http://www.265.com/weather.htm" name="I2" style="overflow: hidden; width: 100%; height: 50px;"></object>';
-	document.getElementById("weather").innerHTML = str;
+	//var str = '<object type="text/html" data="http://www.265.com/weather.htm" name="I2" style="overflow: hidden; width: 100%; height: 50px;"></object>';
+	//document.getElementById("weather").innerHTML = str;
 }
 
 function showWeatherLoop() {

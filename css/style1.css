@@ -378,6 +378,11 @@ form input {
     /*border-color: #999999 #cccccc #cccccc #999999;*/
 }
 
+#search form input[type="text"] {
+    /*color: yellow;*/
+    width: 13em;
+}
+
 form.login .buttonarea {
     background-color: #0066ff;
     text-align: center;
