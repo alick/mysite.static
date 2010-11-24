@@ -76,7 +76,21 @@ p {
 }
 
 #wecando {
+    margin: 0;
+    padding: 0;
     background-color: #e2edff;
+    height: 1.1em;
+}
+
+#wecando ul {
+    margin: 0;
+    padding: 0;
+}
+
+#wecando li {
+    display: inline;
+    list-style-type: none;
+    font-size: large;
 }
 
 #surfing {
