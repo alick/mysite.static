@@ -23,7 +23,9 @@ var Animals=new Array("鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡
 var Gan=new Array("甲","乙","丙","丁","戊","己","庚","辛","壬","癸");
 var Zhi=new Array("子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥");
 var now = new Date();
-var SY = now.getYear() + 1900; 
+// getYear give different values in Firefox and IE
+// So better to user getFullYear()
+var SY = now.getFullYear(); 
 var SM = now.getMonth();
 var SD = now.getDate();
 
