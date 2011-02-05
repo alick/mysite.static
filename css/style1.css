@@ -41,6 +41,12 @@ em {
     text-transform: uppercase;
 }
 
+/* for fully compatible with all browsers
+ */
+del {
+    text-decoration: line-through;
+}
+
 h1, h2, h3 {
     color: navy;
 }
