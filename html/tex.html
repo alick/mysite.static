@@ -26,7 +26,7 @@
     <div id="maincontent">
         <div id="wecando">
             <h2><a id="index" href="../index.html" class="focus" name=
-            "index">首页</a></h2>
+                    "index">首页</a></h2>
         </div><!-- end of wecando -->
 
         <p>TeX是一个专业的文档排版工具，用于生成高质量的文档书籍。如今
@@ -37,14 +37,22 @@
         。</p>
 
         <p><a href=
-        "http://www.ctex.org/TeX">这里</a>有对TeX的历史、未来、优点和
-    不足等的中文简介。</p>
+            "http://www.ctex.org/TeX">这里</a>有对TeX的历史、未来、优点和
+        不足等的中文简介。</p>
 
         <p>CTAN(Comprehensive TeX Archive
         Network)是提供最齐全的及时更新的与TeX相关的软件的一个站点，在
         全球有许多镜像站点。中国大陆有<a href=
-        "ftp://ftp.ctex.org/mirrors/CTAN/">ctex的镜像</a>和<a href=
-        "ftp://mirrors.xmu.edu.cn/CTAN/">厦门大学的镜像</a>。</p>
+            "ftp://ftp.ctex.org/mirrors/CTAN/">ctex的镜像</a>和<a href=
+            "ftp://mirrors.xmu.edu.cn/CTAN/">厦门大学的镜像</a>。</p>
+        <p>要在 Linux 系统下安装 TeX 工具，推荐用网络安装的方式下载安装 TeXLive 最新版（目前是2010）。
+        这需要首先下载一个
+        <a href='ftp://ftp.ctex.org/mirrors/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz'>安装脚本</a>，
+        名字为 install-tl-unx.tar.gz 。解压后在解压得到的目录下使用类似下面的命令安装：</p>
+        <pre>sudo ./install-tl --gui=perltk -repository='ftp://ftp.ctex.org/mirrors/CTAN/systems/texlive/tlnet/'</pre>
+        <p>也就是说，安装需要 root 权限（如果不选择安装到系统目录则不需要），指定使用 GUI 图形界面（需要系统上有 Perl 的
+        Tk 模块），指定从 ctex.org 的镜像下载需要安装的软件（各种宏包和文档）。</p>
+
 
         <p>用于TeX的文档字数统计工具：
         <pre>texcount -chinese texfile</pre>
@@ -52,38 +60,59 @@
         <p>下面列出一些在线资料</p>
 
         <ol>
-            <li><a href=
-                "http://code.google.com/p/ctex-kit/wiki/SimpleChineseTemplates">ctex-kit
-                各种工具链下最简单的中文文档模板</a></li>
+            <li>中文相关</li>
+            <ol>
+                <li><a href=
+                    "http://code.google.com/p/ctex-kit/wiki/SimpleChineseTemplates">ctex-kit
+                    各种工具链下最简单的中文文档模板</a></li>
 
-            <li><a href=
-                "http://code.google.com/p/ctex-kit/wiki/SimpleChineseTemplates">科学网-潘林的博客-TEX</a></li>
+                <li><a href=
+                    "http://yihui.name/cn/2010/02/misc-issues-in-latex-lyx-r-sweave-pgfsweave/">
+                    关于LaTeX+LyX+R/Sweave+pgfSweave+PDF图形的若干中文问题 | 谢益辉</a></li>
+            </ol>
 
-            <li><a href="http://www.codecogs.com/latex/eqneditor.php">Online
-                LaTeX Equation Editor</a></li>
+            <li>命令帮助</li>
+            <ol>
+                <li><a href="http://www.ctex.org/documents/latex/latex2e-html/ltx-2.html">Help On LaTeX Commands</a></li>
+            </ol>
 
-            <li><a href=
-                "http://yihui.name/cn/2010/02/misc-issues-in-latex-lyx-r-sweave-pgfsweave/">
-                关于LaTeX+LyX+R/Sweave+pgfSweave+PDF图形的若干中文问题 | 谢益辉</a></li>
+            <li>数学</li>
+            <ol>
+                <li><a href=
+                    "http://blog.sina.com.cn/s/blog_61403f080100ej8t.html">latex帮助
+                    （显示数学公式）_老李_新浪博客</a></li>
+            </ol>
 
-            <li><a href="http://www.ctex.org/documents/latex/latex2e-html/ltx-2.html">Help On LaTeX Commands</a></li>
+            <li>宏包</li>
+            <ol>
+                <li><a href="http://ece.uwaterloo.ca/~aplevich/Circuit_macros/html/examples.html">Circuit_macro examples</a></li>
+            </ol>
 
-            <li><a href=
-                "http://blog.sina.com.cn/s/blog_61403f080100ej8t.html">latex帮助
-                （显示数学公式）_老李_新浪博客</a></li>
+            <li>幻灯片</li>
+            <ol>
+                <li><a href=
+                    "http://dsec.pku.edu.cn/~yuhj/wiki/TeXSlides.html">
+                    做幻灯片(Slide)的建议</a></li>
+            </ol>
 
-            <li><a href="http://www.aaronbraver.com/TeXTabTool.html">Tabular
-                Generator</a></li>
+            <li>画图，插图</li>
+            <ol>
+                <li><a href="http://tex.loria.fr/prod-graph/zoonekynd/metapost/metapost.html">Metapost : exemples</a></li>
 
-            <li><a href="http://ece.uwaterloo.ca/~aplevich/Circuit_macros/html/examples.html">Circuit_macro examples</a></li>
+                <li><a href="http://www.reimeika.ca/marco/prettyplots/">Making plots using Octave, gnuplot, and LaTeX</a></li>
+                <li><a href="http://www.ctex.org/documents/latex/graphics/">LATEX2e 插图指南 王磊</a></li>
+            </ol>
 
-            <li><a href=
-                "http://dsec.pku.edu.cn/~yuhj/wiki/TeXSlides.html">
-                做幻灯片(Slide)的建议</a></li>
+            <li>Misc 杂项</li>
+            <ol>
+                <li><a href="http://www.codecogs.com/latex/eqneditor.php">Online
+                    LaTeX Equation Editor</a></li>
 
-            <li><a href="http://tex.loria.fr/prod-graph/zoonekynd/metapost/metapost.html">Metapost : exemples</a></li>
+                <li><a href="http://www.aaronbraver.com/TeXTabTool.html">Tabular
+                    Generator</a></li>
 
-            <li><a href="http://www.reimeika.ca/marco/prettyplots/">Making plots using Octave, gnuplot, and LaTeX</a></li>
+                <li><a href="http://detexify.kirelabs.org/classify.html">Detexify LaTeX handwritten symbol recognition</a></li>
+            </ol>
 
         </ol>
     </div><!-- end of maincontent -->
