@@ -307,50 +307,41 @@ background-color: #e0fffe;
 .surfing a:hover {
     color: yellow;
 }
+
 .bubble {
     position:relative;
-    padding:15px;
+    padding:0px;
     margin:1em 3em 3em;
     width: 80%;
     color:#fff;
     background:#075698;
-    /* 圆角
-     */
-border-radius: 10px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-/* 线性渐变效果
- * 似乎无效
- background: -webkit-gradient(linear, left top, left bottom, from(#f9d835), to(#f3961c));
- background:-moz-linear-gradient(top, #f9d835, #f3961c);
- background:-o-linear-gradient(top, #f9d835, #f3961c);
- background:linear-gradient(top, #f9d835, #f3961c);
- */
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#f9d835), to(#f3961c));
+    background:-moz-linear-gradient(top, #f9d835, #f3961c);
+    background:-o-linear-gradient(top, #f9d835, #f3961c);
+    background:linear-gradient(top, #f9d835, #f3961c);
 }
-/*
+
 .bubble:after {
- */
-/* \0000a0 means the html entity &nbsp;
- * in css
- */
-/*
-content: "\0000a0";
-width: 0px;
-height: 0px;
-display: block;
-border-style: solid;
-border-width: 15px;
-border-color: #f3961c transparent transparent transparent;
- */
-/*
-position: relative;
- */
-/*
-z-index: -1;
-bottom: -30px;
-left: 50px;
+    /* \0000a0 means the html entity &nbsp;
+     * in css
+     */
+    content: "\0000a0";
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #f3961c transparent transparent transparent;
+    position: relative;
+    z-index: +1;
+    bottom: -30px;
+    left: 500px;
 }
- */
 
 .version {
     text-decoration: underline;

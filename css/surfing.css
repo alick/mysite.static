@@ -1,6 +1,14 @@
 .siteclass {
     /* border: 1px dotted blue; */
     margin: 3px;
+    /*color: orange;*/
+}
+
+.siteclassname {
     color: orange;
 }
+.siteclassname:after {
+    content: "⌨";       /* UNICODE KEYBOARD SYMBOL */
+}
+
 /* vim:set et sw=4: */
