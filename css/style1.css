@@ -312,6 +312,9 @@ background-color: #e0fffe;
 .surfing a:hover {
     color: yellow;
 }
+.surfing a:focus {
+    color: yellow;
+}
 
 .bubble {
     position:relative;
