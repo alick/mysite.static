@@ -60,44 +60,45 @@ if (x == 2 || x == -10)  {value = "猪";}
 }
 //  End -->
 </script>
-<form name="zodiac" class="zodiac">
-<fieldset>
-<legend>计算星座与属相</legend>
-   <div>
-	<label>出生年份</label>
-<input type="text" size="10" name="year" value="出生年份" onClick=value=""></div>
-	<div>
-		    <label>出生月份</label>
+<form name="zodiac" class="zodiac" action="">
+    <fieldset>
+        <legend>计算星座与属相</legend>
+        <div>
+            <label>出生年份</label>
+            <input type="text" size="10" name="year" value="出生年份" onClick='value=""' />
+        </div>
+        <div>
+            <label>出生月份</label>
 
-<select name="month">
-                          <option value="x" selected>选择月份</option>
-                          <option value="1">一月</option>
-                          <option value="2">二月</option>
-                          <option value="3">三月</option>
-                          <option value="4">四月</option>
-                          <option value="5">五月</option>
-                          <option value="6">六月</option>
-                          <option value="7">七月</option>
-                          <option value="8">八月</option>
-                          <option value="9">九月</option>
-                          <option value="10">十月</option>
-                          <option value="11">十一月</option>
-                          <option value="12">十二月</option>
-                        </select></div>
-                    <div><label>出生日期</label>
-                      <input type="text" name="date" value="输入日期" size="10" onClick=value="">
-	
-                      <div>
-                      <input type="button" value="计算" onClick="signs()">
-                      </div>
-                      </div>
-                    <div><label>星座:</label>
-                        <input type="text" name="sign" size="10" value="">
-                      </div>
-                     <div><label>属相:</label>
-                        <input type="text" name="csign" size="10">
-                      </div>
-</fieldset>
+            <select name="month">
+                <option value="x" selected>选择月份</option>
+                <option value="1">一月</option>
+                <option value="2">二月</option>
+                <option value="3">三月</option>
+                <option value="4">四月</option>
+                <option value="5">五月</option>
+                <option value="6">六月</option>
+                <option value="7">七月</option>
+                <option value="8">八月</option>
+                <option value="9">九月</option>
+                <option value="10">十月</option>
+                <option value="11">十一月</option>
+                <option value="12">十二月</option>
+        </select></div>
+        <div><label>出生日期</label>
+            <input type="text" name="date" value="输入日期" size="10" onClick='value=""' />
+
+            <div>
+                <input type="button" value="计算" onClick="signs()" />
+            </div>
+        </div>
+        <div><label>星座:</label>
+            <input type="text" name="sign" size="10" value="" />
+        </div>
+        <div><label>属相:</label>
+            <input type="text" name="csign" size="10" />
+        </div>
+    </fieldset>
 </form>
       <p>来自红联&nbsp;<a href="http://www.linuxdiyf.com/bbs/">前往红联论坛</a></p>
 </div>

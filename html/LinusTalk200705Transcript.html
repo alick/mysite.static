@@ -1,0 +1,1113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LinusTalk200705Transcript</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/style1.css" rel="stylesheet" type="text/css" />
+    <link href="../img/favicon.ico" rel="SHORTCUT ICON" />
+    <!-- <script type="text/javascript" src="../js/jquery.js">
+</script> -->
+</head>
+
+<body>
+    <noscript><h1>javascript 已被禁用。</h1></noscript>
+    <div id="header">
+
+        <div id="sitebranding">
+            <h1>LinusTalk200705Transcript</h1>
+        </div>
+
+        <div id="tagline">
+            <p><strong>just a mirror</strong></p>
+        </div>
+
+    </div><!-- end of header -->
+
+    <div id="maincontent">
+        <div id="wecando" class="shadow">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="surfing.html">站点导航</a></li>
+                <li><a href="resources.html" class="focus">文档资料</a></li>
+                <li><a href="images.html">美图收藏</a></li>
+                <li><a href="music.html">OGG音乐</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div><!-- end of wecando -->
+
+		<!-- start content -->
+<p><i>This is transcript of <a href="http://www.youtube.com/watch?v=4XpnKHJAok8" class="external text" rel="nofollow">Tech Talk: Linus Torvalds on Git</a> at Google on YouTube.</i>
+</p>
+<ul><li> 토발즈가 git에 대해 강의한 동영상(<a href="http://www.youtube.com/watch?v=4XpnKHJAok8" class="external free" rel="nofollow">http://www.youtube.com/watch?v=4XpnKHJAok8</a> )에 대한 자막용 파일입니다. 
+</li></ul>
+<hr />
+<p><i>Andrew:</i>
+
+</p><p>Thank you, for coming everybody, some of you probably already
+have heard of Linus Torvalds, those of you who haven't, you are
+the people with Macintoshes on your laps.
+</p><p>He is a guy who delights being cruel to people.  His latest
+cruel act is to create a revision control system which is
+expressly designed to make you feel less intelligent than you
+thought you were.
+</p><p>Thank you for coming down today, Linus.  I've been getting
+e-mails for the past few days from people saying "where is
+Linus, why hasn't he merged my tree -- he does not love me
+anymore".  And he walked in my office this afternoon, "what are
+you doing here?"  Thank you taking the time off.  So Linus is
+here today to explain to us why on earth he wrote a software
+tool which, eh, only he is smart enough to know how to use.
+</p><p><i>[applause]</i>
+</p><p><i>Linus:</i>
+</p><p>So I have a few words of warning which is I do not actually do
+speaking very much, partly because I do not like speaking,
+partly because over the last few years everybody actually wants
+me to talk about nebulous visions for the next century about
+Linux, and I am a geek and I actually prefer talking about
+technology.
+</p><p>So that's why I am not talking about the kernel, because it is
+just too big to cram into a one hour talk although apparently
+Andrew did that two days ago.  I am instead talking about git,
+which is the source control management system that we use for
+the kernel.
+</p><p>I am really really really bad at doing slides, which means that
+if we actually end up following these slides, you will be bored
+out of your mind. And the talk will probably not be very good
+anyway, so I am the kind of speaker who really enjoys getting
+questions, and if that means that we kind-of veer off in the
+tangent, you'll be happier, I'll be happier and the talk will
+probably be more interesting anyway.  I don't know how you do
+the things here at Google talks, but I am just saying, don't
+feel shy as far as I am concerned.  If your manager will shoot
+you, that's your problem.
+</p><p>[shows "Credits" slide]
+</p><p>I want to give a few credits before I start.
+</p><p>I credit CVS in a very very negative way.  Because I, in many
+ways, when I designed git, it's "what would Jesus do" except
+that it's "what would CVS never ever do"-kind of approach to
+source control management.  I've never actually used CVS for
+the kernel. For the first 10 years of kernel maintenance, we
+literally used tarballs and patches, which is a much superior
+source control management system than CVS is, but I did end up
+using CVS for 7 years at a commercial company, and I hate it
+with a passion.
+</p><p>When I say I hate CVS with a passion, I have to also say that if
+there any SVN users (Subversion users) in the audience, you
+might want to leave.  Because my hatred of CVS has meant that I
+see Subversion as being the most pointless project ever started,
+because the whole slogan for the Subversion for a while was 'CVS
+done right' or something like that.  And if you start with that
+kind of slogan, there is nowhere you can go.  It's like, there
+is no way to do CVS right.
+</p><p>So that's the negative kind of credit.
+</p><p>Positive credit is BitKeeper.  and I realize that a lot of
+people thought there were a lot of strife over with BitKeeper,
+and that the parting was very painful in many ways.  As far as I am
+concerned, the parting was amicable, even though it looked very
+non-amicable to outsiders.  And BitKeeper was not only the first
+source control system that I ever felt was worth using at all,
+it was also the source control system that taught me why there
+is a point to them, and how you actually can do things.
+</p><p>So git, in many ways, even though from a technical angle it is
+very very different from BitKeeper, which was another design
+goal, because I wanted to make it clear that it wasn't a
+BitKeeper clone, a lot of the flows we use with git come
+directly from the flows we learned from BitKeeper.  And I do not
+think you use BitKeeper here inside Google?  As far as I know,
+BitKeeper is the only commercial source control management
+system that actually does distribution, and if you need a
+commercial one, that's the one you should use for that reason.
+
+</p><p>I'd also like to point out that I've been doing git now
+for slightly over two years, but while I started it, and I made
+all the initial coding and design, it's actually been maintained
+by a much more pleasant person, Junio Hamano, for the last year
+and half, and he's really the person who actually made it more
+approachable for mere mortals. Early versions of git did require
+certain amount of brainpower to really wrap your mind around.
+It's got much much easier since.  There's obviously the way I
+always do everything is I try to do everybody else to do as much
+as possible so I can sit back and sip my Piña Colada, so there
+has been a lot of other people involved, too.
+</p><p>That's the credits.  With those out of the way...
+</p><p>[shows the "Content" slide]
+</p><p>So this slide is now one day old.  I didn't actually do the
+slides last night because last night I was out carousing and eating
+Sushi, but the slides will talk about implementation of a
+reliable, high performance, distributed content management
+thing, and the key word here is actually the "distributed" part.
+I will start off trying to explain why distribution is so
+important.  If we never get past that point, I will actually be
+happy.  If we never get to actually what git's implementation
+internally is, it's fine.
+</p><p>I am not also trying teach you how to use git.  There is this
+thing called "google.com", what you do is, it has, you may have
+seen it, it has this thing you can type things in, and you type
+"git" and you press the "I'm feeling lucky" button, and you'll
+actually get the homepage, the homepage has tutorials, it has
+the user manual, they are all in HTML, if you actually want to
+learn to use git, that's where you should start, not at this
+talk.
+</p><p>But as mentioned, if we actually start veering off topic
+into other tangents because of questions, it's all good.
+</p><p>[shows "Content Advisory" slide]
+</p><p>I already gave you kind of a heads-up warning on this, I use the
+term SCM, which I consider to mean "source code management",
+that is revision control.  Some other people think SCM means
+"software configuration management" and see it as a much bigger
+feature including release management and stuff like that; that's
+not what I am talking about, although git is clearly relevant in
+that setting, too.
+</p><p>CVS, we already went there.
+</p><p>You can disagree with me as much as you want, but during this
+talk, by definition, anybody who disagrees is stupid and ugly,
+so keep that in mind.  When I am done speaking, you can go on
+with your lives.  Right now, yes, I have strong opinions, and CVS
+users, if you actually like using CVS, you shouldn't be here.
+You should be in some mental institution, somewhere else.
+</p><p>So before actually I go and talk about the whole distribution
+thing, which I think is the most important part, I'll talk a bit
+about the background because it invariably comes up, because
+people if they've heard about git, a lot of the things they've
+heard about is the background for doing git in the first place.
+</p><p>[shows "Background" slide]
+</p><p>One piece of background information is I really am not a SCM
+person.  I have never been very interested in revision control,
+I thought it was evil, until I met BitKeeper, I actually credit
+that to some degree for why git is so much better than
+everything else, it is because my brain did not rot from years
+and years of thinking CVS did something sane.
+</p><p>I needed a replacement for BitKeeper. The reason for that was
+BitKeeper is a commercial product, but BitMover and Larry McVoy
+allowed it to be used freely for open source projects, as some
+of you may know, the only restriction was that you were not
+supposed to reverse engineer it and you were not supposed to try
+to create a competing product.  And I was happy with that,
+because quite frankly as far as I am concerned, I do open source
+because I think it is the only right way to do software, but at
+the same time I would use the best tool for the job, and quite
+frankly BitKeeper was it.  However, not everybody agreed with
+me.  They are ugly and stupid, but they caused problems and it
+resulted in the fact that Larry and I had several telephone
+conversations, which ended up saying "ho, we'd all be much
+happier if we just part ways and don't make this any worse"; so
+we did.  And I made the Linux 2.6.12-rc2 release, about 2 years
+ago, and said "I'm not going to touch Linux until I have a
+replacement for BitKeeper for doing source code maintenance".
+And one of the replacement options was going back to tarballs
+and patches, but nobody really really liked that anymore.  So I
+actually looked at a lot of alternatives.  Most of them I could
+discard without even trying them out.  If you're not
+distributed, you are not worth using, it's that simple.  If you
+perform badly, you are not worth using, it is that simple.  And
+if you cannot guarantee that the stuff I put into an SCM comes
+out exactly the same, you are not worth using.  Quite frankly,
+that pretty much took care of everything out there.
+</p><p>There are a lot of SCM systems that do not guarantee that what
+you get out of it again is the same thing you put in.  If you
+have a memory corruption, if you have a disc corruption, you may
+never know.  The only way you know is you notice that there is
+corruption in the files when you check them out.  And the source
+control management system does not protect you at all.  And this is
+not even uncommon.  It is very very common.
+</p><p>The performance issue -- one of the things I kind-of liked was a
+system called Monotone, which actually I think there was a talk
+at Google about them some time ago, I am not sure, it had a lot
+of interesting ideas, but the performance was so horrendously
+bad, that, I tried it for a day and realized that I cannot use
+it.
+</p><p>The end result was that I decided I can write something better
+than anything out there in two weeks, and I was right.
+
+</p><p>[shows "Distribution" (cheesy graphics) slide]
+</p><p>So, now we get to the distribution, and this is the worst slide
+of them all, and I am not very proud of it, but the problem is
+that distribution is really really important but when I try to
+make slides about it, I could not do it.  And a part of it is my
+obvious artistic talents, which are on display for all of you,
+but a part of it is that it is really hard to explain.
+</p><p>So before I even start, I'd like to know, how many people are
+used to the notion of a truly distributed source control
+management system?
+</p><p><i>[audiences raise hands]</i>
+</p><p>Are most of you kernel developers?  No?  OK, so there were maybe
+ten hands coming up.
+</p><p>Being distributed very much means that you do not have one
+central location that keeps track of your data.  No single place
+is more important than any other single place.  So for example
+this is why I would never touch Subversion with a ten-foot pole.
+There is a massive subversion repository and it's where
+everybody has to write.  And the centralized model just does not
+work when,... let's look at a few of the cases.
+</p><p>[shows "Distribution" (bullets) slide]
+</p><p>I say it's so much more than just off-line work, but the
+off-line work part is actually maybe the most obvious thing,
+which is that you can take a truly distributed source control
+management system, you can take it on a plane and even if they
+don't offer wi-fi and satellite hookups, you just continue
+working, you can look at all of your logs, you can commit, you
+can do everything you would do even if you were connected to a
+nice Gigabit Ethernet directly to the backbone.  And that is
+really important.  It is doubly important when you have hundreds
+or thousands of people working on the same project, and they may
+not be literally disconnected but in practice they aren't really
+well connected either.  So part of distribution is this off-line
+work theme, even if it is not completely off-line, it is
+important to be able to do everything you want to do from any
+location without having to be able to access the server.  What
+that basic fact actually results in is that you effectively have
+a lot more branching, because everybody who has a complete
+repository and who can do commits on his own, will effectively
+has his own branch, even if he does not realize it.  Even if you
+think of your project as just having a single branch, every
+single time you disconnect your laptop and start working with
+it, you are on your own branch.  And this is really really
+important and it is very different from anybody who is used to
+CVS where branching is considered something that only true gurus
+do.  How many of you have ever used CVS?
+</p><p><i>[audiences raise hands]</i>
+</p><p>OK, everybody.  How many of you have really done a branch and
+ever merged it in CVS?
+</p><p><i>[audiences raise hands]</i>
+</p><p>Good job.  I mean, it wasn't everybody, but it was actually more
+than I expected.  How many of you enjoyed the experience?
+</p><p><i>[laughter]</i>
+
+</p><p>Oooh, OK, so there were a couple.  It is considered hard.  In
+CVS when you merge a branch, I've done it, as little as possible
+but I've had to do it.  What you do is you plan ahead for a week,
+and you basically set aside one day for doing it.  Am I wrong?
+I am not seeing a lot of people saying "No, it was easy, and I
+liked it".  It's horrible.
+</p><p>If you are distributed, you have to realize that every single
+person has his own branch.  It's not horrible, it's not
+something you even have to set up, it just is.  In fact, in git,
+we like branches so much that a lot of people just have 5 or 10
+or 15 of them, just because once you realize that you have to
+have a special branch anyway, you might as well have many and
+one of the branches you do some experimental work on, and one of
+the branches you do maintenance on.  So branching is much more
+inherent when you do distribution.
+</p><p>One of the other things that, to me, is important is that by
+being distributed, you also automatically get to be slightly
+more trustworthy.  I have a theory of backups, which is I do not
+do them, I put stuff up on one site and everybody else mirrors
+it, and if I crash my own machine, I don't really care, because
+I can just download my own work right back.  And it works
+beautifully well, and I do not have to have an MIS
+department.  I hardly suggest everybody else do the same.  But
+this only really works in a distributed environment.  If you use
+CVS, you can't do this, if you use... what do you use here?
+Perforce?  ... Perforce.  Eh ... I'm sorry.  I'm sure it's
+better than CVS.
+</p><p><i>[whispers]</i> A tiny bit.
+</p><p><i>[audience laugh]</i>
+</p><p>So that's part of it.  One of the really nice things which is
+also, maybe you do not have this issue inside a company, but we
+certainly have it in every single open source community I've
+ever seen that uses CVS or Subversion or something like that is
+that you have this notion of "commit access".  Because you have
+a central repository, which means that everybody who is working
+on that project needs to write to that central repository. Which
+means that, since you do not want everybody to write to the
+central repository because most people are morons, you create
+this class of people who are ostensibly not morons.  And most of
+the time what happens is that you make that class too small,
+because it is really hard to know if a person is smart or not,
+and even if you make it too small, you will have problems.  So this
+whole commit access issue, which some companies are able to
+ignore by just giving everybody commit access, is a huge
+psychological barrier and causes endless hours of politics in
+most open source projects.
+</p><p>If you have a distributed model, it goes away.  Everybody has
+commit access, you can do whatever you want to your project.
+You just get your own branch, you do great work or you do stupid
+work, nobody cares, it's your copy. It's your branch.  And later
+on if it turns out that you did a good job, you can tell people,
+"hey here is my branch, and by the way it performs 10x faster
+than anybody else's branch, so nyah nyah nyah, how about pulling
+from me?" And people do.  And that's actually how it works, and
+we never have any politics, that's not quite true --- we have
+other politics, but we do not have to worry about "commit
+access" thing.  And I think this is a huge issue, and that alone
+should mean that every single open source system should never
+use anything but a distributed model.  You get rid of a lot of
+issues.
+</p><p>One of the things that commercial companies, distributed model
+actually help also with their release process.  You can have a
+verification team that has its own tree.  And they pull from
+people and they verify it and when they verified it they can
+push it to the release team.  And say, "hey we have now verified
+our version", and the development people they can go on playing
+with their HEAD, instead of having to create tags, branches or
+whatever you do to try to keep off each other's toes, again you
+keep off each other's toes by every single group can have its
+own tree and track its work and what they want done.  So
+distributed is really really central to any SCM you should ever
+use.
+</p><p>So get rid of Perforce, now.  
+</p><p><i>[applaud]</i>
+</p><p>It's sad, but it is so so true.  And that was my only real slide
+about distribution.  And I'd love to get questions, because we
+are now moving into other areas.
+</p><p><i>Audience:</i>
+
+</p><p>Question.  So how would you do it?  If you had this monstrously
+awesomely big codebase and you wanted to use this without
+stopping business for 6 months, how would you do it?
+</p><p><i>Linus:</i>
+</p><p>Stay by the mic, because I could not quite make out your
+question,... OK, he went away.
+</p><p>How would you do this?  So, an example of actual distribution
+is, you have a group of five people working on one small
+particular feature.  And that means that for a while that
+feature will be very very broken, right?  Because nobody
+actually creates perfect code the first time around, except me,
+but there is only one of me, right?  So what happens is they
+want/need to have their own tree, that they can work in, without
+affecting other people.  You can do this in many different ways.
+In CVS one of the most common ways, because branches are so
+painful, is that you do not actually commit.  You never commit
+until it passes every single test.  And then you have for
+example at your company, you have a very strict committing rule
+saying "you will never ever commit until it's passed the whole
+test suite, and by the way the fact that the test suite takes
+two hours to run, tough".
+</p><p>You cannot afford to commit. And this is something that happens
+at every single company. I bet it happens even here at Google.
+You probably have a strict testsuite and you are not supposed to
+commit unless it passes, and then in practice, people make
+one-liner changes and ignore the test suite because they know
+the one-liner changes can't possibly break.  This happens.
+This is a horrible horrible model.  It just means that you make
+huge commits, because you commit something after you worked on
+it for two weeks, and you have three people working in the same
+sandbox because before they commit they can't see the changes
+that the other people made, this is common, it happens
+everywhere, it's scary.
+</p><p>The other alternative is to use branches even in a centralized
+environment, but branches always end up being pretty expensive
+to do so you cannot do them for experimental features. You do not
+know beforehand if it's something that's gonna take one day or two weeks,
+but most of the time most programmers say "hey, I can do this in
+48 hours".  And it turns out, nah, no you couldn't.  But because
+you feel you can do it in 48 hours, creating a branch, even in
+systems that are better at creating branches than CVS, is a big
+pain.  So you don't do it because you think you can get it
+resolved and you're back to case number 1, but if you decide to
+create a branch, you will affect everybody else's repository,
+because in a centralized environment, branches are global.  So
+you're kind of screwing with everybody else but at least you are
+not screwing with their main HEAD branch.  You are adding stuff
+to their repositories but hopefully in a way that they won't
+notice.  But it does make everybody's repositories bigger.
+</p><p>So either way, you can't win.
+</p><p>In contrast, in a distributed environment what you do is, you
+have five people, they pull the current HEAD, which is hopefully
+good and tested and they start working on it and they start
+committing on it and you don't need to wait for two weeks until
+your commits are stable, because your commits are always local.
+And what happens is within that group of five people, you can pull from
+each other.  That's what distributed means, there is no central
+location, it means everybody is the same and you can merge
+between yourselves, so not only can you commit every single line
+if you want to, without having to run the two-hour testsuite,
+but you can then communicate by pulling and merging each other's
+work and one person finds a bug and commits it and tells the
+other four people "hey, my repository has fix for this", and
+then when that group is done two weeks later, they can tell
+their manager, "hey we have done this, can you ask the main
+group to pull and they will get this new feature, and by the way
+we tested it over two weeks, and it works, and it performs this
+much better because we have actually been able to time it before
+we even ask anybody else to look at it".  And that is a hugely
+better model for doing development.  And this is the model that
+the kernel uses. It turns out that in many places we do not
+need all that power, even in the kernel.  So people usually
+don't pull within one group, but it does happen for example
+the networking people sometimes affect the NFS people and 
+the fact that they can synchronize actually helps.  So this is a
+real practical advantage.
+</p><p>Somebody else has a question.
+</p><p><i>Audience:</i>
+</p><p>It feels like the politics has just been moved to like an
+indirect political question.  Everybody has an access and they
+are all playing with their branches in their sandbox, but at the
+end of the day, there has to be merging and resolving unless you
+have 80 billion flavors of every Linux kernel.
+</p><p><i>Linus:</i>
+</p><p>Absolutely.  So in practice you will never see, oh, there will
+be a thousand or maybe twenty thousand different branches, but
+in practice you won't ever see them because you won't care.  You
+will see like a few main branches, maybe you'll see only one. In
+the case of the kernel, a lot of people, they only really look at
+my branch. so even though there are lot of branches you can
+ignore them.  What happens is that the way merging is done is
+the way real security is done. By a network of trust.  If you
+have ever done any security work, and it did not involve the
+concept of network of trust, then it wasn't a security work, it
+was masturbation. I don't know what you were doing but trust me, it's the only way
+you can do security, and it's the only way you can do
+development.  The way I work, I don't trust everybody.  in fact
+I am a very cynical and untrusting person.  I think most of you
+are completely incompetent.  The whole point of being
+distributed is I don't have to trust you, I do not have to give
+you commit access.  But I know that among the multitude of
+average people, there are some people that just stand out that I
+trust, because I've been working with them.  I only need to
+trust 5, 10, 15 people. If I have a network of trust that covers
+those 5, 10, 15 people that are outstanding, and I know they are
+outstanding, I can pull from them.  I do not have to spend a lot
+of brainpower on the question.  When Andrew send me patches, he
+actually does not use git, it's some kind of defect, but other
+than that, he is a very solid person.  When he asks me to pull,
+he does it by sending a million patches instead, I just do it.
+Sometimes I disagree with some of these patches, but at some
+point, trust means, ... never having to say you're sorry?  ... I
+dunno ... It basically means that you have to accept other
+people's decisions.  And the nice thing about trust is that it
+does network.  That's where the network of trust comes in.  I
+only need to trust a few people that much.  They have other
+people, they have determined, hey, that guy is actually smarter
+than I am, that's actually a really good measure of who you
+should pull from.  If you have determined that somebody else is
+smarter than you, go for it.  You can't lose.  Even if it turns
+out that you pulled crap and somebody else starts complaining,
+you know who you pulled from and you can just point to that
+other person and say "hey, I just pulled, go to him, he knows
+what he is doing".  That's how I work, that's how probably most
+of my lieutenants work.  I pull the networking changes from one
+person, he gets them from many other people that he's worked
+with over time, so this is how it all comes together, it does
+not have to come together to one point.  In the kernel it comes
+together to one point largely I think for historical reasons,
+and actually I've always tried to kind of encourage people to
+have more trees, so we do have vendor trees, we do have -mm
+tree, we have multiple one points, and it happens to be that my
+one point is getting maybe more attention than it always should.
+</p><p>Even if it doesn't come down to one point, it means that you can
+take these thousands of branches, and ignore 99.9% of them.  And
+you know, that hey, there are five branches that are really
+interesting to follow because I am interested in those subareas.
+And it all works very naturally.
+
+</p><p>One of the nice things about this whole network of trust is it's
+not just easy to do technically, it's actually how every single
+person in this room is very fundamentally wired to work.  It is
+how we think.  We do not know 100 people.  We have 5, 7, 10 close
+personal friends, well, we are geeks so we have two, but that's
+basically how humans work is that we have these people that we
+really trust, it's family, it's close friends, and it really
+fits, you don't even have to have a mental model, it fits how
+we are wired up.  So there's huge advantages to it with this whole
+model of network of trust.
+</p><p><i>Audience:</i>
+</p><p>Do you know of any companies that are using distributed systems
+internally?  It seems like there might be a risk of kind-of
+balkanizing the code base, as in people not being in the same
+sandbox don't contribute back.
+</p><p><i>Linus:</i>
+</p><p>So quite frankly there aren't that many distributed systems.
+There is BitKeeper, it is clearly being used at commercial
+companies, we might have somebody in the audience who actually
+knows but, what ... [comment from audience], so HP is using
+things like BitKeeper for the printer project.  I am sure there
+are lot more companies. In the open source world, there are two
+distributed systems that are worth looking at right now.  One of them is
+obviously git.  And you really should pick that one.  But the
+other one is Mercurial, which actually has pretty much the
+same design. There are huge differences in implementation and
+there are some differences in the detail, but it boils down to a
+very similar model.  Git just does it better.  Everything else,
+it's either centralized, or it's too unstable or too slow to use
+for anything big.
+</p><p><i>Audience:</i>
+</p><p>Is there an advantage for a company to have everybody playing in
+the same sandbox?
+</p><p><i>Linus:</i>
+</p><p>I think a lot of companies think that there is an advantage to that. I know
+that inside companies, I do not think that 
+a lot of companies use git knowingly, in
+the sense that it is a company decision. I know several
+companies who use git internally, not knowing that they do so,
+because they actually have their main repository in Subversion,
+and a lot of developers then import it into git because git can
+actually merge things for you.  So you can take a Subversion
+tree, import into git, let git do the merge, which would be a
+major headache to do in Subversion, create a merge commit, and
+actually export it back to Subversion, and nobody else even knew
+you used git. It's kind of sad, but we have cases of people
+talking about doing exactly that inside companies. Git has not
+been around in a form where a lot of people would be comfortable
+using it for more than a half year or so. We have had so huge
+improvements to the user interfaces that realistically a year
+ago at commercial companies a lot of people would just have said
+it's too hard to use. I think we are way past that hump. Git is
+much easier to use than CVS, really. Most people tend to ... eh,
+it's easier to use than anything else. It's just, ... get over
+it.  You do not have to use all the powerful tools, some of them
+might be things you would want to explain and introduce to
+people only after they got over the initial hump of
+understanding what distribution really means, but the basic
+stuff is really easy to do.
+</p><p><i>Audience:</i>
+</p><p>One characteristic of a centralized system is that it's the
+original developer who has to resolve any merges, who has to fix
+merges, how do you do that in git?  And how do you minimize merge
+conflicts?
+</p><p><i>Linus:</i>
+
+</p><p>Thank you for asking me the question.  Did I tell you to ask
+that question?
+</p><p>One of the really nice parts of git is that (a) git does make
+things more,... much easier to merge than a lot of other
+systems.  Merging a branch in CVS tends to be really painful.  I
+merge,... one of my main statistics is that the kernel is
+actually one of the biggest open source projects. We have 22,000
+files. We've used git for two years. During those two years, we
+have averaged 4.5 merges a day, every single day. That's not
+something you do with something where merging is hard. So git
+makes merging easy. But you will inevitably have cases where two
+maintainers send me requests to "please pull my stuff" and I
+pick one of them at random, usually because their mail happened
+to be first in my mailbox, and I pull their stuff, and another
+person had made changes that, it does not have happen that often
+but it does happen, made changes that clashed so much that, I
+said "I could fix this up, but I really don't want to". I did
+not write the code, it's not my area of expertise, it's
+networking or something like that, I can't really judge it, I
+can't test it, so asking me to resolve the merge is just crazy,
+it's not how you should do things. 
+</p><p>	Ok, the Windows machine flaked out again.
+</p><p>So what happens is, remember, distribution means nobody is
+special.  So instead of me merging, I just push out my first
+tree, that did not have any merge issues, and I tell the second
+person, "hey, I tried to pull from you, but I had merge
+conflicts and they weren't completely trivial, so I decided you
+get to do the honors instead."  And they do.  And they know what
+they are doing because it's their changes.  So they can do the
+merges and they probably think I am a moron because the merge
+was so easy and it is obvious I should have taken their code,
+but they do the merge and they update their tree, and say "hey,
+can you pull from me now", and I pull from them and they did all
+the work for me.  That's what is all about: they did all the
+work for me.  So,... and I take the credit.  Now I just need to
+figure out the step 3: profit.
+</p><p>That's kind of another thing that comes very naturally from
+being distributed.  It's not something that is special to git.
+Git makes merging easier than anything else, but git does it
+exactly because git is distributed.
+</p><p><i>Audience:</i>
+</p><p>I do not entirely understand why you think it is necessary to
+have a distributed system to have,...  it seems like you get a
+lot of the good effects, at least for a place like a corporate,
+for open source development it seems very useful for everybody
+can work on their own but, when you really have a centralized
+corporate tree, then a centralized system with really cheap
+branches wouldn't that give you pretty much the same effect?
+Or is it just impossible to do?
+</p><p><i>Linus:</i>
+</p><p>I will argue that centralized systems can't work, but it is
+clearly true that if you are in a tightly controlled corporate
+environment, centralized systems work better, and it is
+unquestionably true that people have been able to use
+centralized systems for the last 35 years. Nobody is really
+arguing that centralized systems cannot work. They cannot work
+as well as distributed systems.  One of the issues you tend to
+have is centralized systems inevitably have problems when you
+have groups in different locations. It tends to work really well
+if you have a really beefy backbone fibre and I guess for Google
+you probably do have some kind of network going, I dunno, and maybe it
+is not as big of an issue as it is for other projects, but trust
+me, not having to go over the network for everything is a huge
+performance saver. I do, ... this is, ... oh, I cannot show you
+a demonstration, and it's not a very interesting demonstration
+anyway, but this is a laptop that is 4-5 years old. It's like a
+Pentium-M 1.6 GHz thing.  I could show you me doing a full diff
+of the kernel on that laptop in just over a second. On my main
+machine, it takes less than a tenth of a second. That's the
+kind of performance you simply cannot get if you have to go over
+the network.  We are talking a couple of packets, going over the
+network, and you just blew the performance. So if you have a
+decentralized system and if you are used to having something
+like commit or diffing the whole source tree taking 30 seconds,
+maybe 30 seconds does not sound that bad to you.  Trust me, when
+you are used to it taking a tenth of a second, 30 seconds sounds
+pretty bad. So there are huge performance issues, even if you
+have a good network. Never mind the fact that most people do not
+have a good network. The other thing is, branches, even if you
+make them technically very cheap to create, just the fact that
+you created them and everybody sees them means, because
+everybody will see them since they are centralized, basically
+means that you don't want to make branches willy-nilly. You
+will have namespace issues. What do you call your branch? Will
+you call it "test", Oh, by the way there are 5000 other branches
+called test1 through 5000, so now you have to make up all the
+naming rules for your branches because you have a centralized
+system that has a centralized branch namespace, which is kind of
+inevitable when you have a centralized system. How does that
+work in a distributed environment? You call your branch "test",
+and it's that easy -- well actually you shouldn't call it
+"test", you should basically name your branches the way you name
+your functions, you should call them something short and sweet
+and to the point -- What is that branch doing.  Git gives you by
+default one branch that is called "master", it's short and sweet
+and to the point: it's the master branch. But you can make a
+branch that is called "experimental-feature-x", and it will be obvious.
+But this is something you simply cannot do in a centralized
+environment. You cannot call branches
+experimental-feature-x. You have to make up stupid idiotic
+names.
+I worked for a company that had nice, as nice as you
+probably can make them, scripts around CVS, that helped
+you make branches, you could actually make branches
+with a simple command, 
+it did not take that long,
+it picked a name for you,
+exactly because it would pick the number,
+so you give it a basename, and you would say
+"this is my branch doing so-and-so", and it
+would call your branch "so-and-so-56". And
+it would tag where you started that branch, because in CVS
+you need to do that too, and you needed to... it took a while,
+but it worked.  You can do these things in centralized systems
+but you do not need to.  If your system is decentralized,
+it just works.
+And that is how it should work.
+So, I'm not saying, I am not going to force you to
+switch over to decentralized, I'm just going to call you ugly and stupid.
+That's the deal.
+</p><p>Anyway, now we are on the Performance slide.
+</p><p><i>Audience:</i>
+</p><p>Can I ask a question?
+</p><p><i>Linus:</i>
+
+</p><p>Yeah.
+</p><p><i>Audience:</i>
+</p><p>Two questions, actually.  One is, how many files would git take,
+and the second one, let's say you have a humongous tree under
+git, would it be possible to check out a part of the tree.
+</p><p><i>Linus:</i>
+</p><p>Great questions.  Those questions actually kind of dovetail into
+a different issue, even though they are performance related.
+One of the things that git is really special about, and this is
+special even with regards to things like Mercurial which
+otherwise is fairly similar, git tracks your content. It never
+ever tracks a single file.  You cannot track a file in git.
+What you can do is you can track a project that has a single
+file, but if your project has a single file, sure do that and
+you can do it, but if you track 10,000 files, git never ever
+sees those as individual files. Git thinks everything as the full
+content.  All history in git is based on the history of the whole
+project.  This has implications for performance.  When you use
+CVS, it's perfectly fine, although it's stupid, to have one huge
+repository that has a million files in it.  Because at the end
+of day, CVS actually thinks of all those million files as a
+single file and you can actually ask CVS to update only that one
+file, because CVS really thinks in those terms.  And that is
+actually true for pretty much everything else, too.  It is
+actually even true for BitKeeper, that is one of the mistakes in
+BitKeeper.
+</p><p>The problem of thinking in terms of single files is that quite
+often, especially if you are high-level maintainer like me, I
+have 22,000 files to track, I do not care about one of them.  I
+might care about a subcollection of them that contains maybe
+1,000 files, I might care about the USB subsystem. But I never
+care about a single file. So git tracks everything as a
+collection of files, and if you ask for the history of a single
+file, git will literally start from the global history and 
+it simplifies it.  It is a very efficient system, you would
+normally not even realize that it does that, but it does mean
+that if you try to track a million files in one repository,
+when you then ask for a single-file history, it's going to be
+slower.
+So it has a different scaling properties than a lot of
+other systems for this very fundamental design reason.
+We have used big repositories.
+We've imported things like the whole SVN history of, maybe not
+the whole -- something like 3/4 of the SVN history of the whole
+KDE project.  And the KDE people are, eh ... I shouldn't call them,
+... I won't,  I like KDE, but trust me.  But they put every
+single component in one repository.  Not very smart.
+</p><p>So what you ended up with is that you had a repository that
+took I think 8GB under the CVS tree, and SVN blew it up to like 3x that
+size, maybe it wasn't quite 8GB in CVS
+but it was big.  It was more than 4GB.  Git would actually 
+compress it down to something like 1.3GB.  So git is actually
+very efficient at taking this project
+and just smashing it together and 
+most things actually perform very well, but
+certain things did not.
+The things that do not perform very well
+if you put a million files in one repository is
+initial clone.  When you get it, you get it all.
+You put it in one repository, git thinks it is one thing.
+Don't do that. If you have multiple components, do them
+as separate repositories, you can actually have what we call
+superproject that contains pointers to other projects,
+the user interfaces there are somewhat lacking,
+but you keep separate projects separate.
+Then you avoid the problem of "you have to get it all".
+Because with git you do have to get it all.
+</p><p><i>Audience:</i>
+</p><p>What about shared code?
+</p><p><i>Linus:</i>
+</p><p>If they are all shared code, what you can do with git,
+if you actually have a lot of shared stuff, 
+since git internally uses a content addressable 
+filesystem, if there are identical files
+with identical contents, it will actually use
+the exact same object for them. And save you a tons of space.
+And you can have these shared objects and still have
+them as separate entities.  You can still have them in 
+separate repositories that just have a shared
+filesystem backing the data.  You can do that.
+If you actually have 
+shared code 
+in the sense that you for example
+have a library, 
+that is used by five different things, that is when you
+use the superproject support where you have 
+one git repository that just tracks all the other 
+git repositories, and it may contain
+stuff like shared 
+build infrastructure, too, but then
+the individual pieces are individual.  This is like
+CVS modules.  In CVS modules are not really
+individual but that's because 
+in CVS
+a directory is kind of a thing on its own anyway,
+so CVS module is a combination of this and
+just tracking them all, but you can basically
+think of it as CVS modules.
+And we do support it but I do have to admit that
+that code is fairly recent and that's one area
+where our
+user interfaces right now are definitely lacking.
+</p><p>There was probably some part of your question that I completely
+forgot.
+</p><p><i>Audience:</i>
+
+</p><p>Can you have just a part of files pulled 
+out of a repository, not the entire repository?
+</p><p><i>Linus:</i>
+</p><p>You can export things as tarballs, you can export things as
+individual files, you can rewrite the whole history to say "I
+want a new version of that repository that only contains that
+part", you can do that, it is a fairly expensive operation it's
+something you would do for example when you import an old
+repository into a one huge git repository and then you can split
+it later on to be multiple smaller ones, you can do it, what I
+am trying to say is that you should generally try to avoid it.
+It's not that git can not handle huge projects, git would
+not perform as well as it would otherwise.  And
+you will have issues that you wish you didn't not have.
+</p><p>So I am skipping this issue and going back to the performance
+issue.
+One of the things I want to say about performance is that 
+a lot of people seem to think that performance is about
+doing the same thing, just doing it faster, and that is not
+true.
+</p><p>[shows "Performance" slide]
+</p><p>That is not what performance is all about.  If you can do something
+really fast, really well, people will start using it differently.
+One of the things I wanted to make sure is that merges go really
+really quickly because I want people to merge often and merge
+early, because as it turns out it becomes easier to merge.  If
+you merge every day, suddenly you never get to the point where
+you have huge conflicts that are hard to resolve.  So if you
+actually make branching and merging easy, you actually avoid a
+whole class of problems that you otherwise have a really
+really hard time avoiding.  So for example, let's go back to one
+of the things where I think the designers of subversion were
+complete morons.  Strong opinions, that's me, right?
+There are a few of them in the room today, I suspect.  You are stupid.
+</p><p><i>[laughter]</i>
+</p><p>Subversion for example, talks very loudly about how they do CVS
+right by making branching really cheap.  It's probably on their
+main webpage where they probably say branching in subversion is
+O(1) operation, you can do as many cheap branches as you want.
+Nevermind that O(1) is actually with pretty large O I think, but
+even if it takes a millionth of a second to do branching, who
+cares?  It's the wrong thing you are measuring.  Nobody is
+interested in branching, branches are completely useless unless
+you merge them, and CVS cannot merge anything at all.  You can
+merge things once, but because CVS then forgets what you did, you can
+never ever merge anything again without getting horrible
+horrible conflicts.  Merging in subversion is a complete
+disaster. The subversion people kind of acknowledge this and they
+have a plan, and their plan sucks too.  It is incredible how
+stupid these people are. They've been looking at the wrong
+problem all the time. Branching is not the issue, merging is.
+And merging they did not do squat for, five years after the
+fact.  That is sad.
+</p><p>So performance is important, but you need to look at what
+matters.
+</p><p>Performance for making a branch under git, it's literally you
+create a new file that is 41-byte in size.  How fast do you
+think that is?  I don't think you could measure it.  You could,
+well, if you use Windows, probably you could measure it, because
+file... [audience: laughter] but whatever, it is so fast you
+cannot really measure it.  That's creating a branch.  Nobody
+cares. It's not an issue.  That's not it.  The only thing that
+matters is how fast can you merge. In git, you can merge...  I
+merge 22,000 files several times a day, and I get unhappy if a
+merge takes more than 5 seconds, and all of those 5 seconds is
+just downloading all the diffs, well not the diffs but its the
+deltas between two trees, the merge itself takes less than half
+a second.  And I do not have to think about it.  What takes
+longer than the merge is, after every merge by default git will
+do a diffstat of everything that changed as a result of that
+merge because I do care about that.  When I merge from somebody,
+I trust them but on the other hand, hey they might have stopped
+using their medication, so I trust them but, let's just be
+honest here, they might have been Ok yesterday, but today might
+not be a good day, so I do diffstat and git does that by
+default, you can turn it off if you really want to but you
+probably shouldn't, it's fast enough anyway, the diffstat usually takes,
+if it's a big merge, the diffstat usually takes a second or
+two.  Because creating a diff and actually doing all the stats
+on, how many lines changed, that actually is much more expensive
+than doing the merge itself.  That's the kind of performance
+that actually changes how you work.  It's no longer doing the
+same thing faster, it's allowing you to work in a completely
+different manner.  That is why performance matters and why you
+really should not look at anything but git.  Hg (Mercurial) is
+pretty good, but git is better.
+</p><p>I think I am running out of time, we'll see if we have any,
+... oh, Ok, this one is still interesting.
+</p><p>We never got to the
+implementation part, you really don't care, I'll say so much
+about implementation is,
+the implementation is really simple.
+The code, the data structures are really really really simple.
+If you then look at the source code and realize it's
+maybe 80,000 lines mostly in C, and it's a kind of C I write, most
+people don't understand, but I comment it.
+The source code may sometimes look complicated because we are
+very performance centric, I am.  I really care, and sometimes
+to make things go really fast, you have to use more complicated
+algorithms than just checking one file at a time.
+When you are doing 22,000 file merges, you do not want to check
+one file at a time, you want to check the whole tree in one go
+and say, "Ah they are the same, I do not have to do anything".
+So git does things like that and that is kind of blows the
+source code up a bit,
+because doing it well is complicated,
+but the basics are really really simple.
+</p><p>And one of the basics is this trust and reliability thing.
+Every single piece of data, when git tracks your content,
+we compress it, we delta it against everything else, but
+we also do a SHA-1 hash, and we actually check it
+when we use it.
+</p><p>If you have disc corruption, if you have RAM corruption, if you
+have any kind of problems at all, git will notice them. It's not
+a question of if. It's a guarantee.  You can have people who try
+to be malicious. They won't succeed.  You need to know exactly
+20 bytes, you need to know 160-bit SHA-1 name of the top of your
+tree, and if you know that, you can trust your tree, all the way
+down, the whole history.  You can have 10 years of history, you
+can have 100,000 files, you can have millions of revisions, and
+you can trust every single piece of it.  Because git is so
+reliable and all the basic data structures are really really
+simple.  And we check checksums. And we don't check some UDP
+packet checksums that is a 16-bit sum of all the bytes.  We
+check checksums that is considered cryptographically
+secure. Nobody has been able to break SHA-1, but the point is,
+SHA-1 as far as git is concerned, isn't even a security feature.
+It's purely a consistency check.  The security parts are
+elsewhere.  A lot of people assume since git uses SHA-1 and
+SHA-1 is used for cryptographically secure stuff, they think
+that it's a huge security feature.  It has nothing at all to do with
+security, it's just the best hash you can get.
+</p><p>Having a good hash is good for being able to trust your data, it
+happens to have some other good features, too, it means when we hash
+objects, we know the hash is well distributed and we do not have
+to worry about certain distribution issues.  Internally it means
+from the implementation standpoint, we can trust that the hash
+is so good that we can use hashing algorithms and know there are
+no bad cases.  So there are some reasons to like the
+cryptographic side too, but it's really about the ability to
+trust your data.  I guarantee you, if you put your data in git,
+you can trust the fact that five years later, after it is
+converted from your harddisc to DVD to whatever new technology
+and you copied it along,
+five years later you can verify the data you get
+back out
+is the exact same data you put in.  And that is something
+you really should look for in a source code management
+system.
+
+</p><p>One of the reasons I care is we actually had for the kernel a
+break-in on one of the BitKeeper sites, where people tried to
+corrupt the kernel source code repository, and BitKeeper
+actually caught it.  BitKeeper did not have a really fancy hash
+at all, I think it is only 16-bit CRC, something like that. But
+it was good enough that you could actually see
+clumsy attempt, it was not cryptographically secure but it was
+hard enough in practice to overcome that it was caught 
+immediately.  But when that happens once to you, you got burned
+once, you do not ever want to get burned again.
+Maybe your projects aren't that important, my projects, they are 
+important.  There is a reason I care.
+</p><p>This is also one of the reasons, to go back to distribution
+angle a bit, when you do, Google, for example, Google code you
+have your source repositories that you help people maintain and
+I think you do so under subversion, and I would never ever trust
+Google to maintain my source code for me.  I am sorry.  You are
+not just that trustworthy. The reason I really prefer
+distributed systems is I can keep my source code behind three
+firewalls on a system that does not allow ssh in at all.  When I
+am here I cannot read my e-mails because my e-mail goes onto my
+machine and the only way I can get into that machine is when I
+am physically on that network.  So maybe I am a cuckoo, maybe I
+am a bit crazy, and I care about security more than most people
+do.  But the whole notion that I would give the master copy of
+source code that I trust and I care about so much I would give
+it to a third party is ludicrous. Not even Google.  Not a way in
+Hell would I do that.  I allow Google to have a copy of it, but
+I want to have something I know that nobody touched it.  By the
+way I am not a great MIS person so disc corruption issue is
+definitely a case that I might worry about because I do not do
+backups, so it's Ok if I can then download it again from
+multiple trusted parties I can verify them against each other
+that part is really easy, I can verify them against hopefully
+that 20 bytes that I really really cared about, hopefully I have
+that in a few places. 20-byte is easier to track than 180MB.
+And corruption is less likely to hit those 20 bytes. If I have
+those 20 bytes, I can download a git repository from a
+completely untrusted source and I can guarantee that they did
+not do anything bad to it.  That's a huge thing and that is
+something when you do hosted repositories for other people if
+you use subversion you are just not doing it right.  You are not
+allowing them to sleep well at night.  Of course, if you do it
+for 70... how many, 75,000 projects?  Most of them are pretty
+small and not that important so it's Ok.  That should make
+people feel better.
+</p><p>I have a few more slides, I think we are over time, I am not
+even going bother showing them.  They are not that interesting,
+I think.
+</p><p>I talked a bit about this whole content vs individual files, git
+tracks content.
+</p><p>[shows "Content Management" slide]
+</p><p>It means that git is really, the only example command line in
+the whole presentation, gitk is a graphical viewer of the
+history of a git project, It's a tcl/tk script that is really
+only doing viewing of stuff that git is really good at showing
+you, and this is the kind of command line I use as the top-level
+maintainer. I want to be able to say, "What changed since a
+particular version," maybe "since the particular date", I can do
+that easily, "in those two directories", or "in those two
+directories and that file", and what this would show me is the
+global history as it pertains to those parts of the repository.
+It is more expensive to compute than the global global history.
+But if my laptop is actually connected to the A/V system I could
+show you even on that laptop it comes up in seconds; it is
+expensive but we are that good. This is something that is really
+really unique to git.  Nobody else can do it.  It's a hugely
+important feature.  Maybe it is not so important for individual
+developers because individual developers often do think in terms
+of single files, but it is important for the people who merge
+stuff.  It is important for people like me and people I work
+with directly because they never basically care about a single
+file, and they do care about these kind of features.  Somebody
+sends a bugreport, which, bugreports are not usually very
+good. but maybe the bugreport is good enough that you can
+pinpoint, "Ok SCSI subsystem".  That's the command line.  You
+cannot say which file, but you can do this and say "Ok that
+would cut it down from 15,000 commits we've had since last week,
+it will cut it down to 50".  That's a huge deal.  That is
+something that nobody else can do. I guarantee you.
+</p><p>So that's the reason you would want to use git. That's what it
+boils down to.  It's safe, it's so fast that you can do things
+that nobody else can do, it does things nobody else can do even
+slowly, and it's distributed.
+</p><p>So go on spread the word.
+</p><p>We have one more question I guess.  What is the timing like, I
+dunno... Quickly
+</p><p><i>Audience:</i>
+</p><p>So the reason to switch from Perforce is really scalability and
+performance. Otherwise people would just keep using it.
+</p><p>Would it be exchanging one set of scalability/performance problems
+with another set of scalability/performance problems?
+</p><p><i>Linus:</i>
+</p><p>I already mentioned the fact that I do not know how you maintain
+stuff in Perforce but when and if you do switch over to git what
+you want to make sure is because of this content model you need
+to do it at sane content boundaries.  And the content boundaries
+usually are actually pretty self-obvious, they really are. You
+have the compiler, you have the main source, you have the
+documentation, well you probably have the documentation spread
+out but you may have, something like user visible documentation
+or maybe Google doesn't but a lot of companies have separate set
+of documentation they give to customers and they have
+documentation that goes into each individual packages.  So one
+of the things you do have to think about with git is that you
+want to make sure it is in somewhat sane hierarchy. Git can
+easily handle largest projects, you can have 10,000 files and
+that's not a problem, the kernel is 22,000 files.  We've done
+with test with 100k and it's fine. It's faster than anything
+else. With million files, I suspect other systems would be
+faster at some things.  And that is the kind of situation that I
+do not want you to get into. But if you do the basic setup
+correctly, git will be basically faster at anything, pretty much
+everything, than anybody else would.  I am very confident about
+git performance. One of the things we don't necessarily do
+really well is "CVS annotate".  People use "CVS annotate" a
+lot. I'm told it sucks under Perforce, too, so you probably don't
+use Perforce version of "annotate", I am not sure. But CVS users
+are used to "CVS annotate", it's one operation that CVS can do
+faster than git because CVS does track things one file at a
+time, git doesn't.
+</p><p>Git has "annotate", but it will actually find, you can ask it,
+if you moved a function from one file to another, git will
+literally tell you the history of that function even across that
+move. Not a file move. A function within a file, it will go and
+dig back and say "Hey those two lines actually came from that
+other file five years ago". Again this is something nobody else
+can do and it boils down to the same thing, it's the contents
+that matter, it's not actually the files. but it makes it much
+more expensive operation so if you go back five years, maybe it
+takes 30 seconds.  On the kernel it takes a second for any file
+I have, we started from no history two years ago, because we
+just made the decision "let's not make it more complicated than
+it needs to be", so right now we only have two years of history
+in the kernel. We have more histories in other projects, we have
+done timings on them, so we've done timings on importing the KDE
+and things like that with more history. There are performance
+issues, but most of them are git is one or two orders of
+magnitude faster, so most of them are the good kind.  And if you
+find something, we actually have a really really good
+community. The git mailing list is fairly high signal-to-noise,
+it does get a fair amount of e-mails, but it actually is a very
+pleasant mailing list. So if anybody is interested, read the
+sources first, but start looking at the mailing list archives.
+We have our flames, we have our pointless discussions, but most
+of them are actually very good.
+</p>
+    </div><!-- end of maincontent -->
+
+    <div id="bottom">
+        <div class="tiny">
+            <p>Made with VIM.</p>
+
+            <p><a href="http://validator.w3.org/">Valid XHTML 1.0 Strict</a>
+            <span class="fun">推荐使用良好支持标准的浏览器</span><a href=
+            "http://www.mozillaonline.com/">获得Firefox</a></p>
+
+            <p><a rel="license" href=
+            "http://creativecommons.org/licenses/by-sa/2.5/cn/"><img alt=
+            "Creative Commons License" style="border-width:0" src=
+            "../img/80x15.png" /></a><br />
+
+            本作品采用<a rel="license" href=
+            "http://creativecommons.org/licenses/by-sa/2.5/cn/">知识共享署名-相同方式共享
+            2.5 中国大陆许可协议</a>进行许可。</p>
+        </div>
+    </div><!-- end of bottom div -->
+
+</body>
+</html>
+
