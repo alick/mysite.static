@@ -7,8 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="../css/style1.css" rel="stylesheet" type="text/css" />
     <link href="../img/favicon.ico" rel="SHORTCUT ICON" />
+    <link href="../css/drag.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/drag.js">
+</script>
     <script type="text/javascript" src="../js/jquery.js">
     </script> 
+    <script type="text/javascript" src="../js/hide.js">
+</script>
     <script type="text/javascript" src="../js/jquery-demo.js">
     </script> 
 </head>
@@ -18,7 +23,7 @@
     <div id="header">
 
         <div id="sitebranding">
-            <h1>sitebranding</h1>
+            <h1>jQuery</h1>
         </div>
 
         <div id="tagline">
@@ -39,7 +44,25 @@
             </ul>
         </div><!-- end of wecando -->
 
-        <p id="backcolorswitcher">点击更改颜色。</p>
+        <div id="backcolorswitcherdiv">
+            <p id="backcolorswitcher">点击更改颜色。</p>
+        </div>
+
+        <div class="dragAble" style="width: 30%;"> 测试一下可拖动 </div>
+        <div class="box_rgba dragAble" style="width: 30%;"> 测试一下透明和可拖动</div>
+        <div class="clickhide"> 点击我，我就会消失。</div>
+        <div class="clickhideslow"> 点击我，我会慢慢消失。</div>
+        <div class="clickfadeout"> 点击我，我会fade out。</div>
+        <div class="panel">
+<pre>
+白日依山尽，
+黄河入海流。
+欲穷千里目，
+更上一层楼。
+</pre>
+        </div>
+        <p class="flip">显示/隐藏《登鹳雀楼》内容</p>
+
 
     </div><!-- end of maincontent -->
 
