@@ -108,7 +108,7 @@ p {
 #surfing {
     /*border: 1px solid red;*/
     position: relative;
-    margin: 0px 16%;
+    margin: 0 10% 0 20%;
     padding: 0px 0px;
     /*left: 40%;*/
     /*width: 55%;*/
@@ -190,10 +190,10 @@ margin: 0px auto;
     float: right;
     width: 20%;
     margin: 0em 5% 0 0;
-    /*padding: 0 0px 20px;*/
-    background-color: #dcdcdc;
+    padding: 1em 0 1em 0em;
+    /*background-color: #dcdcdc;*/
     background-color: rgba(220, 220, 220, 0.3);
-    background:-moz-linear-gradient(top, #f9d835, #f3961c); /* ff 3.6+ */
+    /*background:-moz-linear-gradient(top, #f9d835, #f3961c); *//* ff 3.6+ */
 }
 
 #maincontent {
