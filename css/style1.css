@@ -102,6 +102,7 @@ p {
 #wecando a {
     margin: 0;
     padding: 0 0.2em 0 0.2em;
+    -moz-border-radius: 5px;
 }
 
 #surfing {
@@ -308,9 +309,11 @@ background-color: #e0fffe;
     /*background-color: rgba(255, 255, 0, 0.6);*/
     -moz-border-radius: 5px;
     color: white;
+    padding: 0 0.15em;
 }
 .surfing a:hover {
     color: yellow;
+    font-weight: bold;
 }
 .surfing a:focus {
     color: yellow;
