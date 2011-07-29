@@ -429,3 +429,7 @@ div.panel
     /*height:120px;*/
     /*display:none;*/
 }
+
+ol.cjk {
+    list-style-type: cjk-ideographic;
+}
