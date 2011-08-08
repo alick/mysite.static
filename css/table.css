@@ -1,0 +1,16 @@
+/*
+ * SEE ALSO http://en.wikipedia.org/wiki/Lavender_%28color%29
+ */
+
+.tr-even {
+    /* lavender floral */
+    /*background-color: #B57EDC;*/
+    /* lavender blush */
+    background-color: #FFF0F5; 
+}
+.tr-odd {
+    /* lavender web color */
+    /*background-color: lavender; */
+    /* lavender mist */
+    background-color: #E6E6FA; 
+}
