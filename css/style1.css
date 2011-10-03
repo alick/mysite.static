@@ -123,7 +123,7 @@ p {
     text-decoration: none;
 }
 
-#version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music, #aboutme {
+#version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music, #aboutme, #introduction {
     padding: 12px;
 }
 
