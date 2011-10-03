@@ -124,7 +124,7 @@ p {
 }
 
 #version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music, #aboutme, #introduction {
-    padding: 12px;
+    padding: 0 20px;
 }
 
 #image {
@@ -208,6 +208,11 @@ margin: 0px auto;
     /*background-color: #a2ccff;
      */
     background-color: #f0ffff;
+}
+
+#content-area {
+    margin: 0;
+    padding: 0 20px;
 }
 
 #back2top {
@@ -442,4 +447,24 @@ ol.cjk {
 .ascii {
     font-size: larger;
     text-align: center;
+}
+
+.latex {
+    font-family: "Computer Modern", "Latin Modern Roman", Times, "Times New Roman", serif;
+    letter-spacing: 1px;
+}
+.latex sup {
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    margin-left: -0.36em;
+    margin-right: -0.15em;
+    text-transform: uppercase;
+    vertical-align: 0.15em;
+}
+.latex sub {
+    font-size: 1em;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+    text-transform: uppercase;
+    vertical-align: -0.5ex;
 }

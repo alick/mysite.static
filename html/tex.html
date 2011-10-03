@@ -16,7 +16,7 @@
 <body>
     <div id="header">
         <div id="sitebranding">
-            <h1>TeX</h1>
+            <h1><span class="latex">T<sub>e</sub>X</span></h1>
         </div>
 
         <div id="tagline"><img src="../img/happy_latexing.gif" alt=
@@ -29,6 +29,7 @@
                     "index">首页</a></h2>
         </div><!-- end of wecando -->
 
+        <div id="content-area">
         <p>TeX是一个专业的文档排版工具，用于生成高质量的文档书籍。如今
         也被用于生成电子文档。TeX尤其擅长于对数学公式的排版。</p>
 
@@ -40,12 +41,25 @@
             "http://www.ctex.org/TeX">这里</a>有对TeX的历史、未来、优点和
         不足等的中文简介。</p>
 
+        <p>LaTeX 是对 TeX 的扩展，它引入了文档类的概念，
+        并定义了许多高层的命令，使得普通人也可以很方便地写出高质量文章、
+        论文、书籍。</p>
+
+        <p>TeX 等名字会被它的排版引擎做特殊的处理。
+        使用 <span class="cmdline">\TeX</span>
+        可以得到 <span class="latex">T<sub>e</sub>X</span>，
+        使用 <span class="cmdline">\LaTeX</span>
+        可以得到 <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>，
+        使用 <span class="cmdline">\XeTeX</span>
+        可以得到 <span class="latex">X<sub>∃</sub>T<sub>e</sub>X</span>。
+        </p>
+
         <p>CTAN(Comprehensive TeX Archive
         Network)是提供最齐全的及时更新的与TeX相关的软件的一个站点，在
         全球有许多镜像站点。中国大陆有<a href=
             "ftp://ftp.ctex.org/mirrors/CTAN/">ctex的镜像</a>和<a href=
             "ftp://mirrors.xmu.edu.cn/CTAN/">厦门大学的镜像</a>。</p>
-        <p>要在 Linux 系统下安装 TeX 工具，推荐用网络安装的方式下载安装 TeXLive 最新版（目前是2010）。
+        <p>要在 Linux 系统下安装 TeX 工具，推荐用网络安装的方式下载安装 TeX Live 最新版（目前是 2011）。
         这需要首先下载一个
         <a href='ftp://ftp.ctex.org/mirrors/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz'>安装脚本</a>，
         名字为 install-tl-unx.tar.gz 。解压后在解压得到的目录下使用类似下面的命令安装：</p>
@@ -120,11 +134,10 @@
             </li>
 
         </ol>
+        </div>
     </div><!-- end of maincontent -->
 
     <div id="bottom">
-        <p>与我联系：<a href="mailto:alick9188@163.com">邮箱</a></p>
-
         <div class="tiny">
             <p><a href="http://validator.w3.org/">Valid XHTML 1.0
             Strict</a></p>
