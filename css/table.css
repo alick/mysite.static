@@ -14,3 +14,17 @@
     /* lavender mist */
     background-color: #E6E6FA; 
 }
+
+.smileys td {
+    width: 50%;
+}
+.smileys table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+.smileys table td {
+    border: 1px solid green;
+}

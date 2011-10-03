@@ -16,7 +16,12 @@ apply to the top, right, bottom, and left, respectively.
 
 body {
     margin: 0px;
-    font-family: Verdana, Helvetica, Arial, sans-serif;
+    /* originally from the text book I think*/
+    /*font-family: Verdana, Helvetica, Arial, sans-serif;*/
+    /* css websafe fonts from w3.org */
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /* from fedoraproject.org */
+    font-family: Cantarell,"Droid Sans",Verdana,sans-serif;
     background-color: #e2edff;	/*这个16进制数表示淡蓝色*/
     line-height: 125%;
     padding: 0;
@@ -432,4 +437,8 @@ div.panel
 
 ol.cjk {
     list-style-type: cjk-ideographic;
+}
+
+.ascii {
+    font-size: larger;
 }
