@@ -28,3 +28,16 @@
 .smileys table td {
     border: 1px solid green;
 }
+
+.acronyms td {
+    padding: 2px;
+}
+.acronyms table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-collapse: collapse;
+}
+.acronyms table td {
+    border: 1px solid green;
+}
