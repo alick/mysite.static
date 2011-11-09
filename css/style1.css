@@ -55,17 +55,20 @@ del {
 h1, h2, h3 {
     color: navy;
 }
-
 h1 {
     font-size: x-large;
     margin: 20px;
 }
-
 h2 {
     margin: 0;
     font-size: large;
-    font-weight: normal;
+    font-weight: bold;
     text-decoration: none;	/*另有none, overline, line-through */
+}
+h3 {
+    margin: 0;
+    font-size: medium;
+    font-weight: bold;
 }
 
 p {
