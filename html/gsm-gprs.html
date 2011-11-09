@@ -37,6 +37,7 @@
             </ul>
         </div><!-- end of wecando -->
 
+        <h2>GPRS overview</h2>
 	<p>From <a href="http://en.wikipedia.org/wiki/General_Packet_Radio_Service">GPRS on wikipedia</a>:</p>
 	<ul>
             <li>now maintained by 3GPP</li>
@@ -56,9 +57,91 @@
             <li>prioritized lower than speech</li>
 	</ul>
 
-    </div><!-- end of maincontent -->
+        <h2>No. 7信令</h2>
+        <p>特点</p>
+        <ul>
+            <li>用于交换机间、交换机和数据库(如HLR、VLR和AUC)之间</li>
+            <li>公共信道信令(CCS)：信令信号和业务信号分离</li>
+            <li>灵活、速度快、易扩充</li>
+        </ul>
+        <p>协议组成</p>
+        <ol>
+            <li><abbr title="Message Transfer Part">MTP</abbr>
+            消息传递部分。提供无连接的消息传输。分三层：
+            <ol>
+                <li>信令数据层。信号信道的物理和电气特性。OSI 物理层</li>
+                <li>信令链路层。可靠的数据传输。OSI 数据链路层</li>
+                <li>信令网络层。公共的消息传送功能。OSI 网络层</li>
+            </ol>
+            </li>
+            <li><abbr title="Signaling Connection Control Part">SCCP</abbr>
+            信令连接控制部分。提供数据的无连接和面向连接业务。
+            <ul>
+                <li>无连接：移动用户的鉴权、智能用户的帐号查询</li>
+                <li>有连接：</li>
+            </ul>
+            </li>
+            <li><abbr title="Telephone User Part">TUP</abbr>
+            电话用户部分。电话呼叫有关的信令</li>
+            <li><abbr title="ISDN User Part">ISUP</abbr> ISDN 用户部分</li>
+            <li><abbr title="Transaction Capabilities Application Part">
+                TACP</abbr> 事务处理应用部分。应用层。为各种业务提供接口。
+            </li>
+            <li><abbr title="Mobile Application Part">MAP</abbr>
+            移动应用部分。移动网网内和网间互连</li>
+            <!--<li><abbr title="">OMAP</abbr></li>-->
+        </ol>
+        <p>参见：<a href="http://www.ss7-training.net/">
+            Signaling System No. 7 (SS7/C7): Protocol, Architecture,
+            and Services </a></p>
 
-	</ul>
+        <h2>空中接口</h2>
+        <p>GSM 多址技术：FDMA、TDMA、random access</p>
+        <h3>GSM FDMA Structure</h3>
+        <p>Fig Missing!</p>
+        <h3>GSM TDMA Frame Structure</h3>
+        <p>Fig Missing!</p>
+        <ul>
+            <li>每帧 4.615ms</li>
+            <li>TDMA。8 时槽/时隙，每时槽 0.557ms。</li>
+            <li>帧长 156.25bit = 148 + 8.25 bit</li>
+            <li>modulation scheme in a slot: GMSK</li>
+            <li>组合成复帧、超帧和超高帧</li>
+            <li>发送/接收时槽有时间偏移</li>
+        </ul>
+        <h3>Logical Channels(Traffic Channels and Control Channels)</h3>
+        <p>Traffic Channels</p>
+        <ul>
+            <li>full rate channels</li>
+            <li>half rate channels</li>
+        </ul>
+        <p>Control Channels</p>
+        <ul>
+            <li>BCCH: Broadcast control channel 广播
+            <ul>
+                <li>BCCH 广播控制信道</li>
+                <li>FCCH 频率修正信道</li>
+                <li>SCH 同步信道</li>
+            </ul>
+            </li>
+            <li>CCCH 公共控制信道
+            <ul>
+                <li>PCH(Paging channel) 寻呼信道
+                only downlink, handling incoming call</li>
+                <li>RACH 随机接入信道
+                only uplink, requesting connection establishment</li>
+                <li>AGCH 接入确认信道
+                BTS inform MS outcome of connection setup request</li>
+            </ul>
+            </li>
+            <li>DCCH
+            <ul>
+                <li>SDCCH 独立专用控制信道</li>
+                <li>SACCH 慢相关控制信道</li>
+                <li>FACCH 快相关控制信道</li>
+            </ul>
+            </li>
+        </ul>
 
     </div><!-- end of maincontent -->
 
