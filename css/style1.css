@@ -60,7 +60,7 @@ h1 {
     margin: 20px;
 }
 h2 {
-    margin: 0;
+    margin: 0.5em 0 0;
     font-size: large;
     font-weight: bold;
     text-decoration: none;	/*另有none, overline, line-through */
@@ -91,14 +91,14 @@ p {
 
 #wecando {
     margin: 0;
-    padding: 0;
+    padding: 0.3em 0 0.5em 0;
     background-color: #e2edff;
     height: 1.1em;
 }
 
 #wecando ul {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 0;
 }
 
 #wecando li {
@@ -109,7 +109,7 @@ p {
 
 #wecando a {
     margin: 0;
-    padding: 0 0.2em 0 0.2em;
+    padding: 0.3em 0.2em 0.5em 0.2em;
     -moz-border-radius: 5px;
 }
 
@@ -117,7 +117,7 @@ p {
     /*border: 1px solid red;*/
     position: relative;
     margin: 0 10% 0 20%;
-    padding: 0px 0px;
+    padding: 20px 0px 0px;
     /*left: 40%;*/
     /*width: 55%;*/
 }
