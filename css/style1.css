@@ -93,7 +93,7 @@ p {
     margin: 0;
     padding: 0.3em 0 0.5em 0;
     background-color: #e2edff;
-    height: 1.1em;
+    height: 1.2em;
 }
 
 #wecando ul {
@@ -197,11 +197,11 @@ margin: 0px auto;
     /*border: 1px solid red; */
     float: right;
     width: 20%;
-    margin: 0em 5% 0 0;
-    padding: 1em 0 1em 0em;
+    margin: 2em 5% 0 0;
+    padding: 0em 0 1em 0em;
     /*background-color: #dcdcdc;*/
-    background-color: rgba(220, 220, 220, 0.3);
-    /*background:-moz-linear-gradient(top, #f9d835, #f3961c); *//* ff 3.6+ */
+    /*background-color: rgba(220, 220, 220, 0.3);*/
+    background:-moz-linear-gradient(left, #f0ffff, #e2edff); /* ff 3.6+ */
 }
 
 #maincontent {
