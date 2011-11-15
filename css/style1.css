@@ -471,3 +471,8 @@ ol.cjk {
     text-transform: uppercase;
     vertical-align: -0.5ex;
 }
+
+.nowrap {
+    overflow: visible;
+    white-space: nowrap;
+}
