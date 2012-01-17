@@ -72,9 +72,10 @@ h3 {
 }
 
 p {
-    text-indent: 2em;
+    text-indent: 0em;
     font-size: medium;
     color: navy;	/*navy是海蓝色*/
+    margin: 0 0 1.1em 0;
 }
 
 #header p {
@@ -132,10 +133,9 @@ p {
 }
 
 #image {
-    /*border: 1px solid red;
-     */
-text-align: center;
-margin: 0px auto;
+    /*border: 1px solid red; */
+    text-align: center;
+    margin: 0px auto;
 }
 #image_box_container {
     display: block;
@@ -197,7 +197,7 @@ margin: 0px auto;
 #maincontainer {
     background-color: #f0ffff;
     margin: 0 5% 0 5%;
-    padding: 0;
+    padding: 0.5em 0 1.5em 0;
 }
 
 #sidebar {
