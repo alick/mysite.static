@@ -177,35 +177,11 @@ var sFtv = new Array("0101*元旦","0214 情人节","0308 妇女节","0312 植�
   return('<span class="festival">' + festival + '</span>');
 }
 
-//显示当前时间
-function CurentTime() 
-{ 
-    var now = new Date(); 
-    var hh = now.getHours(); 
-    var mm = now.getMinutes(); 
-    var ss = now.getTime() % 60000; 
-    ss = (ss - (ss % 1000)) / 1000; 
-    var clock = hh+':'; 
-    if (mm < 10) clock += '0'; 
-    clock += mm+':'; 
-    if (ss < 10) clock += '0'; 
-    clock += ss; 
-    return(clock); 
-}
-
-function refreshCalendarClock() //
-{ 
- document.getElementById('ClockTime').innerHTML = CurentTime(); 
-}
-//显示当前时间
-
+// Display current calendar info
 function setCalendar(){
-	var str = YYMMDD()+' '+weekday()+"<span id=ClockTime ></span>"+"<br />"+solarDay1()+solarDay2()+"<br />"+solarDay3();
-	document.getElementById("timer").innerHTML = str;
-}
-function timerStart() {
-setCalendar();
-setInterval('refreshCalendarClock()',1000);//1秒钟刷新1次当前时间
+    var str = YYMMDD()+' '+weekday()+"<br />"+
+              solarDay2()+"<br />"+solarDay1()+"<br />"+solarDay3();
+    document.getElementById("timer").innerHTML = str;
 }
 
-addOnLoadEvent(timerStart);
+addOnLoadEvent(setCalendar);
