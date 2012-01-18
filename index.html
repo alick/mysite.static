@@ -33,73 +33,69 @@
             "Keep It Simple, Stupid">KISS原则</abbr>与Web标准</strong></p>
         </div>
     </div><!-- end of header -->
+
     <div id="wecando" class="shadow">
         <ul>
             <li><a href="index.html" class="focus">首页</a></li>
+
             <li><a href="html/surfing.html">站点导航</a></li>
+
             <li><a href="html/resources.html">文档资料</a></li>
+
             <li><a href="html/images.html">美图收藏</a></li>
+
             <li><a href="html/music.html">OGG音乐</a></li>
+
             <li><a href="html/about.html">关于</a></li>
         </ul>
     </div><!-- end of wecando -->
 
     <div id="maincontainer">
-    <div id="sidebar">
-        <div id="timer">
-            <!-- show current time -->
-            <!--<object type="text/html" data="http://www.265.com/time.html"></object>-->
-        </div>
+        <div id="sidebar">
+            <div id="timer">
+                <!-- show current time -->
+                <!--<object type="text/html" data="http://www.265.com/time.html"></object>-->
+            </div><!--<div id="weather"></div>-->
 
-        <!--<div id="weather"></div>-->
+            <div id="search">
+                <!-- SiteSearch Google copyed from Google but modified-->
 
-        <div id="search">
-            <!-- SiteSearch Google copyed from Google but modified-->
+                <form method="get" id="form1" action=
+                "http://www.google.com.hk/search">
+                    <fieldset>
+                        <input type="hidden" name="ie" value="UTF-8" />
+                        <input type="hidden" name="oe" value="UTF-8" />
+                        <abbr title="用google.cn搜索"><input type="text" name=
+                        "q" maxlength="255" value="" /></abbr> 
+                        <!--<input type="radio" name="sitesearch" value="http://learn.tsinghua.edu.cn:8080/" /><span class="fun">tsinghuaren</span>-->
+                         <select id="select">
+                            <option selected="selected" value="0">
+                                google.com.hk
+                            </option>
 
-            <form method="get" id="form1" action=
-            "http://www.google.com.hk/search">
-                <fieldset>
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <input type="hidden" name="oe" value="UTF-8" />
-                    <abbr title="用google.cn搜索">
-                        <input type="text" name="q"
-                        maxlength="255" value="" />
-                    </abbr> 
-                    <!--<input type="radio" name="sitesearch" value="http://learn.tsinghua.edu.cn:8080/" /><span class="fun">tsinghuaren</span>-->
-                     <select id="select">
-                        <option selected="selected" value="0">
-                            google.com.hk
-                        </option>
+                            <option value="1">
+                                google.com
+                            </option>
+                        </select> <input type="submit" name="btnG" value="Go"
+                        onclick="multi_search()" />
+                    </fieldset>
+                </form>
+            </div><!-- end of search div -->
+        </div><!-- end of sidebar -->
 
-                        <option value="1">
-                            google.com
-                        </option>
-                    </select> <input type="submit" name="btnG" value="Go"
-                    onclick="multi_search()" />
-                </fieldset>
-            </form>
-        </div><!-- end of search div -->
-    </div><!-- end of sidebar -->
+        <div id="maincontent">
+            <div id="introduction">
+                <p>欢迎来到我的个人主页。</p>
 
-    <div id="maincontent">
-        <div id="introduction">
-            <p>欢迎来到我的个人主页。</p>
+                <p>这里有一个我上网用的门户，一些文档资料，几张图片，OGG 音乐的介绍，以及为什么有这些东西的说明。点击导航菜单，
+                即可看到这些东西。这里还有一个 Google 搜索框， 一个万年历加时钟，它们出现在主要页面的侧边栏中。</p>
 
-            <p>
-            这里有一个我上网用的门户，一些文档资料，几张图片，OGG
-            音乐的介绍，以及为什么有这些东西的说明。点击导航菜单，
-            即可看到这些东西。这里还有一个 Google 搜索框，
-            一个万年历加时钟，它们出现在主要页面的侧边栏中。
-            </p>
-            <p>
-            这里没有访问次数统计，没有留言板，没有帐号注册和登录按钮。
-            这是因为这些页面所在的网络学堂个人主页服务不支持使用 PHP
-            等语言生成动态页面，所有可用的就是 HTML/CSS/Javascript 了。
-            <p>
-            最后，希望你能在这里发现有用或者有趣的东西 :-)
-            </p>
-        </div>
-    </div><!-- end of maincontent -->
+                <p>这里没有访问次数统计，没有留言板，没有帐号注册和登录按钮。 这是因为这些页面所在的网络学堂个人主页服务不支持使用
+                PHP 等语言生成动态页面，所有可用的就是 HTML/CSS/Javascript 了。</p>
+
+                <p>最后，希望你能在这里发现有用或者有趣的东西 :-)</p>
+            </div>
+        </div><!-- end of maincontent -->
     </div><!-- end of maincontainer -->
 
     <div id="bottom">
@@ -108,25 +104,18 @@
             Bluefish HTML editor and now VIM.</a></p>
 
             <p><a href="http://validator.w3.org/">Valid XHTML 1.0 Strict</a>
-            <span class="fun">推荐使用良好支持
-                <a href="http://www.webstandards.org/learn/faq/">
-                    Web标准</a>的浏览器，如
-                </span>
-                <a href=
-                    "http://www.mozillaonline.com/">Firefox</a>
-                </p>
+            <span class="fun">推荐使用良好支持 <a href=
+            "http://www.webstandards.org/learn/faq/">Web标准</a>的浏览器，如</span>
+            <a href="http://www.mozillaonline.com/">Firefox</a></p>
 
             <p><a rel="license" href=
             "http://creativecommons.org/licenses/by-sa/2.5/cn/"><img alt=
             "Creative Commons License" style="border-width:0" src=
-            "img/80x15.png"
-           /></a><br />
-
+            "img/80x15.png" /></a><br />
             本作品采用<a rel="license" href=
             "http://creativecommons.org/licenses/by-sa/2.5/cn/">知识共享署名-相同方式共享
             2.5 中国大陆许可协议</a>进行许可。</p>
         </div>
-    </div>
+    </div><!-- vim:set et sw=4: -->
 </body>
 </html>
-<!-- vim:set et sw=4: -->
