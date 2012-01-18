@@ -55,10 +55,11 @@ del {
 h1, h2, h3 {
     color: navy;
 }
+
 h1 {
     font-size: x-large;
-    margin: 20px;
 }
+
 h2 {
     margin: 0.5em 0 0;
     font-size: large;
@@ -78,17 +79,24 @@ p {
     margin: 0 0 1.1em 0;
 }
 
-#header p {
-    font-family: Georgia, Times, serif;
-    font-style: italic;
-}
-
 #header {
     margin: 0px 5% 0px;
-    padding: 3px;
+    padding: 5px;
     background: url(../img/pic_header.jpeg) repeat-x center;
     /* CSS3 border-radius */
     border-radius: 0.5em 0.5em 0 0;
+}
+#sitebranding h1 {
+    font-size: xx-large;
+    margin: 20px;
+}
+#tagline p {
+    font-family: Georgia, Times, serif;
+    width: 50%;
+    margin: 0 0 0 20px;
+}
+#tagline strong {
+    font-style: italic;
 }
 
 #wecando {
@@ -169,9 +177,7 @@ p {
     font-size: 0.9em;
     color: green;
 }
-#tagline {
-    width: 50%;
-}
+
 
 #weather {
     /*border: 1px solid red;*/
