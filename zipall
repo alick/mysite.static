@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dirs=("html" "css" "img" "js" "txt")
+dirs=("html" "css" "img" "js")
 for dir in ${dirs[@]}; do
 echo "Entering directory $dir"
 cd $dir

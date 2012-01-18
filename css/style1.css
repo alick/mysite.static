@@ -75,7 +75,7 @@ h3 {
 p {
     text-indent: 0em;
     font-size: medium;
-    color: navy;	/*navy是海蓝色*/
+    /*color: navy;	[>navy是海蓝色<]*/
     margin: 0 0 1.1em 0;
 }
 
@@ -94,6 +94,7 @@ p {
     font-family: Georgia, Times, serif;
     width: 50%;
     margin: 0 0 0 20px;
+    color: navy;
 }
 #tagline strong {
     font-style: italic;
