@@ -1,27 +1,36 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
-	<TITLE>Unix哲学</TITLE>
-	<meta name="generator" content="Bluefish 1.0.7">
-	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGEDBY" CONTENT="alick zhao">
-	<META NAME="CHANGED" CONTENT="20090716;95000">
-	<META NAME="Info 1" CONTENT="">
-	<META NAME="Info 2" CONTENT="">
-	<META NAME="Info 3" CONTENT="">
-	<META NAME="Info 4" CONTENT="">
-	<STYLE TYPE="text/css">
-	<!--
-		@page { margin: 2cm }
-		P { margin-bottom: 0.21cm }
-		/* PRE { font-family: "宋体" } */
-	-->
-	</STYLE>
-</HEAD>
-<BODY LANG="zh-CN" DIR="LTR">
-<PRE><FONT COLOR="#0047ff">注：蓝色字为批注，红色字为着重</FONT>
-<FONT COLOR="#0047ff">本文由网上的若干篇文章组成</FONT>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8" />
+
+    <title>Unix哲学</title>
+    <meta name="generator" content="Bluefish 1.0.7" />
+    <meta name="CREATED" content="0;0" />
+    <meta name="CHANGEDBY" content="alick zhao" />
+    <meta name="CHANGED" content="20090716;95000" />
+    <meta name="Info 1" content="" />
+    <meta name="Info 2" content="" />
+    <meta name="Info 3" content="" />
+    <meta name="Info 4" content="" />
+    <style type="text/css">
+/*<![CDATA[*/
+        <!--
+                @page { margin: 2cm }
+                P { margin-bottom: 0.21cm }
+                /* PRE { font-family: "宋体" } */
+        -->
+    /*]]>*/
+    </style>
+</head>
+
+<body lang="zh-CN" dir="ltr" xml:lang="zh-CN">
+    <pre>
+<font color="#0047FF">注：蓝色字为批注，红色字为着重</font>
+<font color="#0047FF">本文由网上的若干篇文章组成</font>
 关于Unix哲学
 
 作者：阮一峰　来源：阮一峰的网络日志　 酷勤网收集　2009-06-18
@@ -50,13 +59,13 @@
 
 Wikipedia上列出了好几个版本，不同的人有不同的总结。发明管道命令的Doug
 McIlroy总结了三条，而Eric S. Raymond则在The Art of Unix
-Programming<FONT COLOR="#0047ff">下文还会看到它</FONT>一书中，一口气总
+Programming<font color="#0047FF">下文还会看到它</font>一书中，一口气总
 结了17条（英文版，中文版）。
 
-但是我发现，所有人都同意，“<FONT COLOR="#ff0000">简单原则</FONT>”——尽
+但是我发现，所有人都同意，“<font color="#FF0000">简单原则</font>”——尽
 量用简单的方法解决问题——是“Unix哲学”的根本原则。这也就是著名的
-<FONT COLOR="#ff0000">KISS（keep it simple, stupid）</FONT>，意思是“保持简单
-和笨拙”。<FONT COLOR="#0047ff">或者说，小就是美</FONT>下面就是我对“简
+<font color="#FF0000">KISS（keep it simple, stupid）</font>，意思是“保持简单
+和笨拙”。<font color="#0047FF">或者说，小就是美</font>下面就是我对“简
 单原则”的笔记。如果你想最简单地完成一项编程任务，我认为可以从四个方面
 入手：
 
@@ -92,16 +101,17 @@ right, then make it fast.）90%的功能现在能实现，比100%的功能永远
 
 （完）
 
-原文链接：<a href="http://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html">http://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html</a>
+原文链接：<a href=
+"http://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html">http://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html</a>
 本文出自：阮一峰的网络日志
 
 
 Unix哲学基础
 
-－－摘自《UNIX编程艺术》<FONT COLOR="#0047ff">上面提到过这本书</FONT>
+－－摘自《UNIX编程艺术》<font color="#0047FF">上面提到过这本书</font>
 
-Unix哲学起源于Ken Thompson早期关于如何设计一个服务接口<FONT
-COLOR="#ff0000">简洁、小巧精干</FONT>的操作系统的思考，随着Unix文化在
+Unix哲学起源于Ken Thompson早期关于如何设计一个服务接口<font color=
+"#FF0000">简洁、小巧精干</font>的操作系统的思考，随着Unix文化在
 学习如何尽可能发掘Thompson设计思想的过程中不断成长，同时一路上还从其它
 许多地方博采众长。
 
@@ -117,15 +127,17 @@ Unix哲学（同其它工程领域的民间传统一样）是自下而上的，�
 些。
 
 Unix管道的发明人、Unix传统的奠基人之一Doug McIlroy在[McIlroy78]中曾经说过：
-<FONT COLOR="#0047ff">管道，简单的说，就是将一个命令的输出作为另一个程序的输入，这样沟通起那些小而高效的程序。举个例子：</FONT>
-<FONT COLOR="#0047ff">（书上抄来的:)）</FONT>
-<FONT COLOR="#0047ff">gunzip &lt; /usr/share/man/man1/grep.1.gz | nroff -c -man | less</FONT>
-<FONT COLOR="#0047ff">这一行用一个定向、两个管道连接了四个命令，实现了
+<font color=
+"#0047FF">管道，简单的说，就是将一个命令的输出作为另一个程序的输入，这样沟通起那些小而高效的程序。举个例子：</font>
+<font color="#0047FF">（书上抄来的:)）</font>
+<font color=
+"#0047FF">gunzip &lt; /usr/share/man/man1/grep.1.gz | nroff -c -man | less</font>
+<font color="#0047FF">这一行用一个定向、两个管道连接了四个命令，实现了
 ，将grep帮助手册的内容用gunzip解压缩，解压结果传给nroff通过手册宏格式
-化，这个输出又传给less进行交互显示。</FONT>
-<FONT COLOR="#0047ff">管道的强大使我想到了perl语言，下面的一行（完整的）程序：</FONT>
-<FONT COLOR="#0047ff">perl -pi -e '$_=sprintf”%04d%s”,$.,$_'afile</FONT>
-<FONT COLOR="#0047ff">它能将文本文件afile的每行加上4位数的行号</FONT>
+化，这个输出又传给less进行交互显示。</font>
+<font color="#0047FF">管道的强大使我想到了perl语言，下面的一行（完整的）程序：</font>
+<font color="#0047FF">perl -pi -e '$_=sprintf”%04d%s”,$.,$_'afile</font>
+<font color="#0047FF">它能将文本文件afile的每行加上4位数的行号</font>
 （i）让每个程序就做好一件事。如果有新任务，就重新开始，不要往原程序中
 加入新功能而搞得复杂。
 
@@ -142,8 +154,8 @@ Unix管道的发明人、Unix传统的奠基人之一Doug McIlroy在[McIlroy78]�
 后来他这样总结道（引自《Unix的四分之一世纪》（A Quarter Century of
 Unix [Salus]））：
 
-Unix哲学是这样的：<FONT COLOR="#ff0000">一个程序只做一件事，并做好。程
-序要能协作。程序要能处理文本流，</FONT>因为这是最通用的接口。
+Unix哲学是这样的：<font color="#FF0000">一个程序只做一件事，并做好。程
+序要能协作。程序要能处理文本流，</font>因为这是最通用的接口。
 
 Rob Pike, 最伟大的C语言大师之一, 在《Notes on C Programming》中从另一
 个稍微不同的角度表述了Unix的哲学[Pike]：
@@ -169,7 +181,7 @@ Rob Pike, 最伟大的C语言大师之一, 在《Notes on C Programming》中从
 Ken Thompson——Unix最初版本的设计者和实现者，禅宗偈语般地对Pike的原则4
 作了强调：
 
-<FONT COLOR="#ff0000">拿不准就穷举。</FONT>
+<font color="#FF0000">拿不准就穷举。</font>
 
 Unix哲学中更多的内容不是这些先哲们口头表述出来的，而是由他们所作的一切
 和Unix本身所作出的榜样体现出来的。从整体上来说，可以概括为以下几点：
@@ -215,14 +227,14 @@ Unix哲学中更多的内容不是这些先哲们口头表述出来的，而是�
 Unix的玩家有什么好烦的呢。
 
  发表于： 2009-02-21，修改于： 2009-02-21 21:27 已浏览245次，有评论0条
- 推荐 投诉from：<a
- href="http://blog.chinaunix.net/u2/87718/showart_1838217.html">http://blog.chinaunix.net/u2/87718/showart_1838217.html</a>
+ 推荐 投诉from：<a href=
+"http://blog.chinaunix.net/u2/87718/showart_1838217.html">http://blog.chinaunix.net/u2/87718/showart_1838217.html</a>
 
 
 Unix哲学
 维基百科，自由的百科全书
 跳转到： 导航, 搜索
-	此條目或章节需要擴充，请協助改善这篇條目。（2008年10月20日）
+        此條目或章节需要擴充，请協助改善这篇條目。（2008年10月20日）
 更進一步的信息可能會在討論頁或扩充请求中找到。请在擴充條目後將此模板移除。
 
 Unix哲学是一套基于Unix操作系统顶级开发者们的经验提出的软件开发的准则和哲学。
@@ -285,15 +297,15 @@ Pike的第一、二条规则重申了高德纳的著名格言：“过早的优�
 及和其他领域使用Unix系统的资深程序员们的讨论结果，写成了《The UNIX
 Philosophy》，提出了9条训格之言：
 
-   <FONT COLOR="#ff0000"> * 一：小即是美。</FONT>
-<FONT COLOR="#ff0000">    * 二：让程序只做好一件事。</FONT>
-<FONT COLOR="#ff0000">    * 三：尽可能早地建立原型。</FONT>
-<FONT COLOR="#ff0000">    * 四：可移植性比效率更重要。</FONT>
-<FONT COLOR="#ff0000">    * 五：数据应该保存为文本文件。</FONT>
-<FONT COLOR="#ff0000">    * 六：Use software leverage to your advantage.</FONT>
-<FONT COLOR="#ff0000">    * 七：使用shell脚本来提高效率和可移植性。</FONT>
-<FONT COLOR="#ff0000">    * 八：避免使用漂亮的用户界面。</FONT>
-<FONT COLOR="#ff0000">    * 九：为每个程序添加一个过滤机制。</FONT>
+   <font color="#FF0000"> * 一：小即是美。</font>
+<font color="#FF0000">    * 二：让程序只做好一件事。</font>
+<font color="#FF0000">    * 三：尽可能早地建立原型。</font>
+<font color="#FF0000">    * 四：可移植性比效率更重要。</font>
+<font color="#FF0000">    * 五：数据应该保存为文本文件。</font>
+<font color="#FF0000">    * 六：Use software leverage to your advantage.</font>
+<font color="#FF0000">    * 七：使用shell脚本来提高效率和可移植性。</font>
+<font color="#FF0000">    * 八：避免使用漂亮的用户界面。</font>
+<font color="#FF0000">    * 九：为每个程序添加一个过滤机制。</font>
 
 此外还有十条原则则并不为所有人认同，甚至还是争论的焦点（如宏内核和微内核之争）：
 
@@ -337,9 +349,10 @@ Philosophy》，提出了9条训格之言：
 [编辑] 外部链接
 
     * Worse is Better，Richard P. Gabriel
-    * The Rise of &quot;Worse is Better&quot;，Richard P. Gabriel
+    * The Rise of "Worse is Better"，Richard P. Gabriel
 
-来自<a href="http://zh.wikipedia.org/wiki/Unix%E5%93%B2%E5%AD%A6">“http://zh.wikipedia.org/wiki/Unix%E5%93%B2%E5%AD%A6”</a>
+来自<a href=
+"http://zh.wikipedia.org/wiki/Unix%E5%93%B2%E5%AD%A6">“http://zh.wikipedia.org/wiki/Unix%E5%93%B2%E5%AD%A6”</a>
 分类: 软件开发 | Unix
 1个隐藏分类: 自2008年10月扩充中的条目
 查看
@@ -354,9 +367,10 @@ Wikimedia Foundation
     * 关于维基百科
     * 免责声明
 
-</PRE>
-		<div id="go_home" align="center">
-			<a href="../index.html">回到首页</a>
-		</div><!-- end of go_home div -->
-</BODY>
-</HTML>
+</pre>
+
+    <div id="go_home" align="center">
+        <a href="../index.html">回到首页</a>
+    </div><!-- end of go_home div -->
+</body>
+</html>

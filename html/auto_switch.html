@@ -1,31 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>自动跳转</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link href="style1.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+
+    <title>自动跳转</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+//<![CDATA[
     <!-- 
     var Browser_Agent=navigator.userAgent; 
-//document.write(Browser_Agent); 
-if(Browser_Agent.indexOf("MSIE")!=-1){//判断浏览器是否为ie 
-var a=navigator.browserLanguage;
-   {
+    //document.write(Browser_Agent); 
+    if(Browser_Agent.indexOf("MSIE")!=-1){//判断浏览器是否为ie 
+    var a=navigator.browserLanguage;
+    {
     if (a="zh-cn") setTimeout("window.top.location.href='http://www.google.cn';",10000); 
-	else if(a="zh-tw") setTimeout("window.top.location.href='http://www.google.com.tw';",10000);
-	else setTimeout("window.top.location.href='http://www.google.com';",10000);
+        else if(a="zh-tw") setTimeout("window.top.location.href='http://www.google.com.tw';",10000);
+        else setTimeout("window.top.location.href='http://www.google.com';",10000);
     }}
-else{//firefox opera safari 
-var b=navigator.language;
-{
+    else{//firefox opera safari 
+    var b=navigator.language;
+    {
     if (b="zh-cn") setTimeout("window.top.location.href='http://www.google.cn';",10000); 
     else if(b="zh-tw") setTimeout("window.top.location.href='http://www.google.com.tw';",10000);
-	else setTimeout("window.top.location.href='http://www.google.com';",10000);
-}}
+        else setTimeout("window.top.location.href='http://www.google.com';",10000);
+    }}
     // --> 
-</script>
-	</head>
-	<body>
-	本页面将在10秒后自动跳转到google首页！
-	</body>
-<!-- vim:set et sw=4: -->
+    //]]>
+    </script>
+</head>
+
+<body>
+    本页面将在10秒后自动跳转到google首页！<!-- vim:set et sw=4: -->
+</body>
+</html>
