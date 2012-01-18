@@ -1,0 +1,73 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+my $INSERTED = '
+    <div id="wecando" class="shadow">
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="surfing.html">站点导航</a></li>
+            <li><a href="resources.html" class="focus">文档资料</a></li>
+            <li><a href="images.html">美图收藏</a></li>
+            <li><a href="music.html">OGG音乐</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+    </div><!-- end of wecando -->
+
+    <div id="maincontainer">
+';
+
+my $flag = 0;
+while (<>) {
+    if (/^\s*$/) {
+        print;
+        next;
+    }
+    if ($flag == 0) {
+        print;
+        if (/\<\/div\>\<\!-- end of header --\>/) {
+            $flag = 1;
+        }
+    } elsif ($flag == 1) {
+        if (/wecando/) {
+            print STDERR "already there...\n";
+            last;
+        } else {
+            print "$INSERTED";
+            print;
+            $flag = 2;
+        }
+    } elsif ($flag == 2) {
+        if (/wecando/) {
+            print STDERR "start deleting\n";
+            $flag = 3;
+        }
+    } elsif ($flag == 3) {
+        if (/wecando/) {
+            print STDERR "stop deleting\n";
+            $flag = 4;
+        }
+    } elsif ($flag == 4) {
+        print;
+        if (/maincontent/) {
+            print STDERR "add end div\n";
+            print "    </div><!-- end of maincontainer div -->\n";
+            $flag = 5;
+        }
+    } elsif ($flag == 5) {
+        print;
+    } else {
+        print STDERR "OMG...\n";
+    }
+}
+if ($flag == 0 or $flag == 1) {
+    print STDERR "not processed!\n";
+    exit 1;
+} elsif ($flag == 5) {
+    print STDERR "processed!\n";
+    exit 0;
+} else {
+    print STDERR "error with flag ".$flag;
+    exit (10 + $flag);
+}
