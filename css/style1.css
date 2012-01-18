@@ -128,10 +128,6 @@ p {
     text-decoration: none;
 }
 
-#version, #releasenoteshead, #releasenotes, #copyright, #why_write_this, #oggintro, #songs, #music, #aboutme, #introduction {
-    padding: 0 20px;
-}
-
 #image {
     /*border: 1px solid red; */
     text-align: center;
