@@ -137,25 +137,16 @@ p {
     text-decoration: none;
 }
 
-#image {
-    /*border: 1px solid red; */
-    text-align: center;
-    margin: 0px auto;
-}
-#image_box_container {
-    display: block;
-    width: 800px;
-    height: 520px;
-    margin: 0 auto;
-    text-align: center;
-}
 #image_box  {
     margin: 0;
-    width: 800px;
-    height: 520px;
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
+    padding: 3px;
+}
+#image_box a:hover {
+    background-color: transparent;
+}
+#image_box li {
+    display: inline;
+    list-style-type: none;
 }
 
 /*
