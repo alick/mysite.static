@@ -5,8 +5,7 @@ for dir in ${dirs[@]}; do
 echo "Entering directory $dir"
 cd $dir
 if [ $? -eq 0 ]; then
-	rm -i *~
-	rm -i *.zip
+	rm -f *~
 	echo "creating zip file"
 	zip $dir *
 	mv "$dir.zip" ../
