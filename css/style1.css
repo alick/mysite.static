@@ -372,14 +372,19 @@ border-radius: 0 0 0.5em 0.5em;
     margin: 2px;
 }
 
-pre {
+pre, code {
     color: #000;
     background-color: #f9f9f9;
     border: 1px dashed #2f6fab;
     font-weight: normal;
-    max-height:20em; 
+    /*max-height:20em;*/
     overflow:auto;
     margin: 20px;
+}
+
+pre {
+    padding: 0.5em;
+    line-height: 1.5em;
 }
 
 form fieldset {
