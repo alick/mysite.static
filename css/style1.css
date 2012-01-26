@@ -27,6 +27,17 @@ body {
     padding: 0;
 }
 
+ol, ul {
+    list-style-position: inside;
+    margin: 0 0 1.1em 0;
+}
+ol {
+    list-style-type: decimal;
+}
+ul {
+    list-style-type: disc;
+}
+
 li {
     font-size: medium;
 }
@@ -54,6 +65,8 @@ del {
 
 h1, h2, h3 {
     color: navy;
+    font-weight: bold;
+    margin: 0.5em 0 0.5em 0;
 }
 
 h1 {
@@ -61,15 +74,11 @@ h1 {
 }
 
 h2 {
-    margin: 0.5em 0 0;
     font-size: large;
-    font-weight: bold;
     text-decoration: none;	/*另有none, overline, line-through */
 }
 h3 {
-    margin: 0;
     font-size: medium;
-    font-weight: bold;
 }
 
 p {
@@ -97,6 +106,7 @@ p {
     color: navy;
 }
 #tagline strong {
+    font-weight: bold;
     font-style: italic;
 }
 
