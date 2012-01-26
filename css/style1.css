@@ -27,7 +27,6 @@ body {
     padding: 0;
     counter-reset: chapter;
 }
-
 ol, ul {
     list-style-position: outside;
     margin: 0 0 1.1em 1.5em;
@@ -228,10 +227,6 @@ p {
     width: 22%;
     margin: 0 0 0 auto;
     padding: 0;
-    /*background-color: #dcdcdc;*/
-    /*background-color: rgba(220, 220, 220, 0.3);*/
-    /*background: -moz-linear-gradient(left, #f0ffff, #e2edff); [> ff 3.6+ <]*/
-    /*background: -webkit-linear-gradient(left, #f0ffff, #e2edff);*/
 }
 
 #maincontent {
@@ -405,7 +400,7 @@ pre, code {
     background-color: #f9f9f9;
     border: 1px dashed #2f6fab;
     font-weight: normal;
-    /*max-height:20em;*/
+    font-family: monospace;
     overflow:auto;
     margin: 20px;
 }
@@ -505,3 +500,56 @@ ol.cjk {
     overflow: visible;
     white-space: nowrap;
 }
+
+/* Nice for printing hardcopies */
+@media print {
+    body {
+        font-family: serif;
+        font-size: 12pt;
+        background-color: white;
+        color: black;
+    }
+    a:link, a:visited {
+        background-color: transparent;
+        color: #520;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    #maincontent a:link:after, #maincontent a:visited:after {
+        content: " (" attr(href) ") ";
+        font-size: 90%;
+    }
+    h1, h2, h3 {
+        background-color: white;
+        color: black;
+    }
+
+    /* Do not display nav bar, sidebar */
+    #wecando, #sidebar {
+        display: none;
+    }
+
+    #header, #maincontainer, #bottom {
+        background-color: white;
+        color: black;
+    }
+    #header {
+        text-align: center;
+        background-image: none;
+    }
+    #tagline p {
+        margin: 0;
+        width: auto;
+    }
+    #maincontent {
+        width: auto;
+        margin: 0 5%;
+    }
+    pre, kbd {
+        overflow: visible;
+    }
+}
+/* Not working... */
+/*@page :first {*/
+    /*margin-top: 10%;*/
+/*}*/
