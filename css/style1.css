@@ -25,11 +25,12 @@ body {
     background-color: #e2edff;	/*这个16进制数表示淡蓝色*/
     line-height: 125%;
     padding: 0;
+    counter-reset: chapter;
 }
 
 ol, ul {
-    list-style-position: inside;
-    margin: 0 0 1.1em 0;
+    list-style-position: outside;
+    margin: 0 0 1.1em 1.5em;
 }
 ol {
     list-style-type: decimal;
@@ -37,11 +38,16 @@ ol {
 ul {
     list-style-type: disc;
 }
-
 li {
     font-size: medium;
 }
-
+ol > li > ol, ul > li > ul, ol > li > ul, ul > li > ol {
+    margin: 0 0 0.6em 1.5em;
+    list-style-position: inside;
+}
+ul > li > ul {
+    list-style-type: circle;
+}
 a {
     text-decoration: none;
     color: #0099cc;
@@ -69,10 +75,18 @@ h1, h2, h3 {
     margin: 0.5em 0 0.5em 0;
 }
 
+h1:before {
+    content: counter(chapter) ". ";
+    counter-increment: chapter;  /* Add 1 to chapter */
+}
 h1 {
     font-size: x-large;
+    counter-reset: section;      /* Set section to 0 */
 }
-
+h2:before {
+    content: counter(chapter) "." counter(section) " ";
+    counter-increment: section;
+}
 h2 {
     font-size: large;
     text-decoration: none;	/*另有none, overline, line-through */
@@ -94,6 +108,10 @@ p {
     background: url(../img/pic_header.jpeg) repeat-x center;
     /* CSS3 border-radius */
     border-radius: 0.5em 0.5em 0 0;
+}
+#sitebranding h1:before {
+    content: '';
+    counter-reset: chapter;
 }
 #sitebranding h1 {
     font-size: xx-large;
