@@ -398,16 +398,16 @@ border-radius: 0 0 0.5em 0.5em;
 pre, code {
     color: #000;
     background-color: #f9f9f9;
-    border: 1px dashed #2f6fab;
     font-weight: normal;
     font-family: monospace;
     overflow:auto;
-    margin: 20px;
 }
 
 pre {
+    margin: 20px;
     padding: 0.5em;
     line-height: 1.5em;
+    border: 1px dashed #2f6fab;
 }
 
 form fieldset {
@@ -505,7 +505,7 @@ ol.cjk {
 @media print {
     body {
         font-family: serif;
-        font-size: 12pt;
+        font-size: 10pt;
         background-color: white;
         color: black;
     }
@@ -515,13 +515,16 @@ ol.cjk {
         text-decoration: underline;
         font-weight: bold;
     }
-    #maincontent a:link:after, #maincontent a:visited:after {
-        content: " (" attr(href) ") ";
-        font-size: 90%;
-    }
     h1, h2, h3 {
         background-color: white;
         color: black;
+    }
+    pre, kbd, code {
+        overflow: visible;
+    }
+    pre {
+        font-size: 82%;
+        margin: 1em 0;
     }
 
     /* Do not display nav bar, sidebar */
@@ -545,8 +548,9 @@ ol.cjk {
         width: auto;
         margin: 0 5%;
     }
-    pre, kbd {
-        overflow: visible;
+    #maincontent a:link:after, #maincontent a:visited:after {
+        content: " (" attr(href) ") ";
+        font-size: 90%;
     }
 }
 /* Not working... */
