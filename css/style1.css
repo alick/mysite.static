@@ -274,17 +274,6 @@ border-radius: 0 0 0.5em 0.5em;
     width: 600px;
 }
 
-#bgp-libra {
-    background-color: purple;
-    background-image: url(../img/libra.jpg);
-}
-
-#bgp-libra p {
-    color: navy;
-    width: 61.8%;
-    margin-left: 12px;
-}
-
 /* class definition
  */
 .focus {
