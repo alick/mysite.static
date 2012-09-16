@@ -68,6 +68,15 @@
             autoconf</span>。 自动化得到Makefile的流程图参考info autoconf 的Making
             configure Scripts一节。</p>
 
+            <p>Tips from "Expert C Programming"</p>
+            <ul>
+                <li>“始终将 -l 函数库选项放在编译命令行的最右边。”
+                编译命令行上静态链接库的顺序是非常重要的。符号通常以从左到右的
+                顺序去解析。如果在自己代码前引入静态库，那么事实上不会从函数库
+                中提取任何符号。
+                </li>
+            </ul>
+
             <p>下面列出一些特定主题的资料：</p>
 
             <ol>
