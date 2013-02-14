@@ -1,14 +1,32 @@
 .siteclass {
-    /* border: 1px dotted blue; */
+    border: 1px solid blue;
+    border-radius: 3px;
     margin: 3px;
-    /*color: orange;*/
+    display: inline-block;
+    max-width: 240px;
+    min-width: 100px;
+    vertical-align: top;
+}
+
+.siteclass:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.siteclass a {
+    display: inline-block;
+    margin: 3px 2px;
+    padding: 2px;
 }
 
 .siteclassname {
-    color: orange;
+    color: white;
+    background-color: #0066FF;
+    border-radius: 2px 2px 0 0;
+    display: block;
+    font-size: 90%;
 }
 .siteclassname:after {
-    content: "⌨";       /* UNICODE KEYBOARD SYMBOL */
+    content: "¶";
 }
 
 /* vim:set et sw=4: */
